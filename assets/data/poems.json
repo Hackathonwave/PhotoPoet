@@ -1,0 +1,85 @@
+[
+    {
+        "title": "A Bird, came down the Walk",
+        "author": "Emily Dickinson",
+        "lines": [
+            "A Bird, came down the Walk",
+            "He did not know I saw",
+            "He bit an Angle Worm in halves",
+            "And ate the fellow, raw"
+        ],
+        "tags": [
+            "Nature",
+            "The Romantic"
+        ]
+    },
+    {
+        "title": "I wandered lonely as a cloud",
+        "author": "William Wordsworth",
+        "lines": [
+            "I wandered lonely as a cloud",
+            "That floats on high o'er vales and hills",
+            "When all at once I saw a crowd",
+            "A host, of golden daffodils"
+        ],
+        "tags": [
+            "Nature",
+            "The Romantic",
+            "Uforo"
+        ]
+    },
+    {
+        "title": "The Road Not Taken",
+        "author": "Robert Frost",
+        "lines": [
+            "Two roads diverged in a yellow wood",
+            "And sorry I could not travel both",
+            "And be one traveler, long I stood",
+            "And looked down one as far as I could"
+        ],
+        "tags": [
+            "The Romantic",
+            "Uforo",
+            "The Beat"
+        ]
+    },
+    {
+        "title": "Ozymandias",
+        "author": "Percy Bysshe Shelley",
+        "lines": [
+            "I met a traveller from an antique land",
+            "Who said: Two vast and trunkless legs of stone",
+            "Stand in the desert . . . Near them, on the sand",
+            "Half sunk, a shattered visage lies"
+        ],
+        "tags": [
+            "The Beat",
+            "Uforo"
+        ]
+    },
+    {
+        "title": "Old Pond",
+        "author": "Matsuo Basho",
+        "lines": [
+            "The old pond,",
+            "A frog jumps in:",
+            "Sound of water."
+        ],
+        "tags": [
+            "The Haiku",
+            "Nature"
+        ]
+    },
+    {
+        "title": "In a Station of the Metro",
+        "author": "Ezra Pound",
+        "lines": [
+            "The apparition of these faces in the crowd:",
+            "Petals on a wet, black bough."
+        ],
+        "tags": [
+            "The Haiku",
+            "The Beat"
+        ]
+    }
+]

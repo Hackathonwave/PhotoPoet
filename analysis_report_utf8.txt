@@ -1,0 +1,25 @@
+﻿Analyzing photo_poet...                                         
+
+  error - Target of URI hasn't been generated: 'package:photo_poet/models/poem_model.g.dart' - lib\models\poem_model.dart:3:6 - uri_has_not_been_generated
+   info - The import of 'dart:typed_data' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/foundation.dart' - lib\services\poetry_coordinator.dart:1:8 - unnecessary_import
+
+flutter : 2 issues 
+found. (ran in 11.5s)
+At line:1 char:1
++ flutter analyze 
+--no-fatal-infos > 
+analysis_report.txt 
+2>&1
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (2 issues f   
+ ound. (ran in 11.    
+5s):String) [], R    
+emoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
