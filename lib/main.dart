@@ -6,17 +6,37 @@ import 'services/local_poetry_service.dart';
 import 'services/analytics_service.dart';
 
 void main() async {
+  // Emergency logging for startup issues
+  debugPrint('--- APP STARTUP ---');
+
   WidgetsFlutterBinding.ensureInitialized();
+  debugPrint('Binding initialized');
 
-  // Initialize Firebase (Google Analytics)
-  await Firebase.initializeApp();
+  // Catch ALL top-level errors to prevent white screen
+  FlutterError.onError = (details) {
+    FlutterError.presentError(details);
+    debugPrint('Flutter Error: ${details.exception}');
+  };
 
-  // Initialize Local Poetry System
-  await LocalPoetryService.init();
-  await LocalPoetryService.seedDatabaseIfNeeded();
+  try {
+    // Initialize Firebase (Google Analytics)
+    // Note: On Web/Desktop, this might fail without DefaultFirebaseOptions
+    await Firebase.initializeApp();
 
-  // Log App Open
-  await AnalyticsService.logAppOpen();
+    // Log App Open
+    await AnalyticsService.logAppOpen();
+  } catch (e) {
+    debugPrint('Firebase initialization failed: $e');
+    // We continue so the app doesn't show a white screen
+  }
+
+  try {
+    // Initialize Local Poetry System
+    await LocalPoetryService.init();
+    await LocalPoetryService.seedDatabaseIfNeeded();
+  } catch (e) {
+    debugPrint('Local storage initialization failed: $e');
+  }
 
   runApp(const PhotoPoetApp());
 }

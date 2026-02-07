@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:io';
-import 'dart:typed_data';
-import 'package:flutter/foundation.dart' show kIsWeb;
-import '../services/poetry_coordinator.dart';
 import 'package:image_picker/image_picker.dart';
-import 'result_screen.dart';
+import 'dart:io';
+import '../services/storage_service.dart';
+import '../services/audio_recorder_service.dart';
+import '../services/poetry_coordinator.dart';
+import '../widgets/waveform_animator.dart';
+import 'package:flutter/foundation.dart';
+import 'dart:async';
 import 'package:http/http.dart' as http;
+import 'result_screen.dart';
 
 class CompositionScreen extends StatefulWidget {
   final XFile? image;
@@ -18,10 +21,13 @@ class CompositionScreen extends StatefulWidget {
     this.image,
     this.imageUrl,
     this.heroTag = 'composition_hero',
+    this.initialPrompt,
   }) : assert(
          image != null || imageUrl != null,
          'Either image or imageUrl must be provided',
        );
+
+  final String? initialPrompt;
 
   @override
   State<CompositionScreen> createState() => _CompositionScreenState();
@@ -31,6 +37,21 @@ class _CompositionScreenState extends State<CompositionScreen> {
   String _selectedVoice = 'The Romantic';
   double _intensity = 0.6;
   bool _isGenerating = false;
+  bool _isRecording = false;
+  DateTime? _recordingStartTime;
+  late TextEditingController _promptController;
+
+  @override
+  void initState() {
+    super.initState();
+    _promptController = TextEditingController(text: widget.initialPrompt);
+  }
+
+  @override
+  void dispose() {
+    _promptController.dispose();
+    super.dispose();
+  }
 
   final List<Map<String, dynamic>> _voices = [
     {'name': 'Uforo', 'icon': Icons.local_bar_rounded},
@@ -40,6 +61,7 @@ class _CompositionScreenState extends State<CompositionScreen> {
   ];
 
   Future<void> _generatePoetry() async {
+    debugPrint('[CompositionScreen] _generatePoetry called');
     setState(() {
       _isGenerating = true;
     });
@@ -140,6 +162,8 @@ class _CompositionScreenState extends State<CompositionScreen> {
                 ),
               ),
             ),
+            const SizedBox(height: 32),
+            _buildVoiceMemoSection(),
             const SizedBox(height: 40),
             _buildVoiceSelection(),
             const SizedBox(height: 40),
@@ -194,6 +218,7 @@ class _CompositionScreenState extends State<CompositionScreen> {
               final isSelected = _selectedVoice == voice['name'];
               return GestureDetector(
                 onTap: () => setState(() => _selectedVoice = voice['name']),
+                behavior: HitTestBehavior.opaque,
                 child: Container(
                   width: 104,
                   decoration: BoxDecoration(
@@ -341,5 +366,183 @@ class _CompositionScreenState extends State<CompositionScreen> {
               ],
             ),
     );
+  }
+
+  Widget _buildVoiceMemoSection() {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: const Color(0xFF252D36).withValues(alpha: 0.5),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: Colors.white10),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'VOICE INSPIRATION',
+                style: GoogleFonts.manrope(
+                  color: Colors.white70,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.2,
+                ),
+              ),
+              const Spacer(),
+              if (_isRecording)
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 4,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.red.withValues(alpha: 0.2),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    'REC',
+                    style: GoogleFonts.manrope(
+                      color: Colors.red,
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          if (_promptController.text.isNotEmpty && !_isRecording)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16),
+              child: Text(
+                _promptController.text,
+                style: GoogleFonts.notoSerif(
+                  color: Colors.white70,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+          Row(
+            children: [
+              Expanded(
+                child: WaveformAnimator(
+                  isRecording: _isRecording,
+                  color: _isRecording
+                      ? const Color(0xFFB08D5B)
+                      : Colors.white10,
+                ),
+              ),
+              const SizedBox(width: 16),
+              GestureDetector(
+                onTap: _handleRecording,
+                behavior: HitTestBehavior.opaque,
+                child: Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: _isRecording
+                        ? Colors.red.withValues(alpha: 0.2)
+                        : const Color(0xFFB08D5B).withValues(alpha: 0.2),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    _isRecording ? Icons.stop_rounded : Icons.mic_rounded,
+                    color: _isRecording ? Colors.red : const Color(0xFFB08D5B),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _handleRecording() async {
+    debugPrint(
+      '[CompositionScreen] _handleRecording tapped, isRecording: $_isRecording',
+    );
+    if (_isRecording) {
+      try {
+        final path = await AudioRecorderService.stopRecording();
+        final now = DateTime.now();
+        final duration = _recordingStartTime != null
+            ? now.difference(_recordingStartTime!)
+            : Duration.zero;
+
+        setState(() {
+          _isRecording = false;
+          _recordingStartTime = null;
+        });
+
+        if (path != null) {
+          debugPrint(
+            '[CompositionScreen] Recording stopped, duration: ${duration.inSeconds}s',
+          );
+          // Save to archive automatically
+          final memo = AudioMemo(
+            id: now.millisecondsSinceEpoch.toString(),
+            filePath: path,
+            date: now,
+            duration: duration,
+          );
+          await StorageService.saveAudioMemo(memo);
+
+          if (mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: const Text('Voice inspiration saved to library!'),
+                backgroundColor: const Color(0xFFB08D5B),
+                duration: const Duration(seconds: 2),
+              ),
+            );
+          }
+        }
+      } catch (e) {
+        debugPrint('[CompositionScreen] Stop recording failed: $e');
+        setState(() {
+          _isRecording = false;
+          _recordingStartTime = null;
+        });
+      }
+    } else {
+      try {
+        await AudioRecorderService.startRecording();
+        setState(() {
+          _isRecording = true;
+          _recordingStartTime = DateTime.now();
+        });
+      } catch (e) {
+        debugPrint('[CompositionScreen] Recording failed error: $e');
+        if (mounted) {
+          String message = 'Recording failed. Please try again.';
+          if (e.toString().contains('MICROPHONE_PERMISSION_DENIED')) {
+            message =
+                'Microphone access denied. Please allow it in your settings.';
+          } else if (e.toString().contains('RECORDER_PLUGIN_MISSING')) {
+            message = 'Audio recorder plugin not found.';
+          }
+
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(message),
+              backgroundColor: Colors.redAccent,
+              behavior: SnackBarBehavior.floating,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              action: SnackBarAction(
+                label: 'OK',
+                textColor: Colors.white,
+                onPressed: () {},
+              ),
+            ),
+          );
+        }
+      }
+    }
   }
 }

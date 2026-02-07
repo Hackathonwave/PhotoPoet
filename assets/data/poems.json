@@ -1,85 +1,2207 @@
 [
     {
-        "title": "A Bird, came down the Walk",
-        "author": "Emily Dickinson",
+        "id": "0",
+        "title": "Radiant Morning",
+        "author": "PhotoPoet",
         "lines": [
-            "A Bird, came down the Walk",
-            "He did not know I saw",
-            "He bit an Angle Worm in halves",
-            "And ate the fellow, raw"
+            "Light pours across the waking world today,",
+            "A golden chime in every soul we see.",
+            "Dancing through the shadows in their play,",
+            "As ancient fears at last are set quite free.",
+            "The vibrant earth is singing of its grace,",
+            "Reflected in a child's bright, joyous face.",
+            "We race toward the edge of sky and sea,",
+            "To touch the heart of all we're meant to be.",
+            "Oh, feel the pulse of everything that's good,",
+            "A morning song through leaf and mountain wood."
         ],
         "tags": [
-            "Nature",
-            "The Romantic"
-        ]
-    },
-    {
-        "title": "I wandered lonely as a cloud",
-        "author": "William Wordsworth",
-        "lines": [
-            "I wandered lonely as a cloud",
-            "That floats on high o'er vales and hills",
-            "When all at once I saw a crowd",
-            "A host, of golden daffodils"
-        ],
-        "tags": [
-            "Nature",
-            "The Romantic",
-            "Uforo"
-        ]
-    },
-    {
-        "title": "The Road Not Taken",
-        "author": "Robert Frost",
-        "lines": [
-            "Two roads diverged in a yellow wood",
-            "And sorry I could not travel both",
-            "And be one traveler, long I stood",
-            "And looked down one as far as I could"
-        ],
-        "tags": [
-            "The Romantic",
             "Uforo",
-            "The Beat"
+            "Light"
         ]
     },
     {
-        "title": "Ozymandias",
-        "author": "Percy Bysshe Shelley",
+        "id": "1",
+        "title": "Gothic Whisper",
+        "author": "PhotoPoet",
         "lines": [
-            "I met a traveller from an antique land",
-            "Who said: Two vast and trunkless legs of stone",
-            "Stand in the desert . . . Near them, on the sand",
-            "Half sunk, a shattered visage lies"
+            "The shadow weeps beneath a velvet moon,",
+            "A cold desire in the midnight breeze.",
+            "My soul is tethered to a spirit tune,",
+            "Like ivy clinging to the dying trees.",
+            "Thou art the ghost that haunts my heavy deep,",
+            "While ancient memories in the darkness sleep.",
+            "I wander through the halls of what has been,",
+            "To find the truth that lies so well unseen.",
+            "The heart is but a crypt of forgotten rain,",
+            "Where silence echoes with a beautiful pain."
+        ],
+        "tags": [
+            "The Romantic",
+            "Shadow"
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Subway Beat",
+        "author": "PhotoPoet",
+        "lines": [
+            "Jazz is crying in the concrete heat,",
+            "Synchronized pulses on a dirty street.",
+            "Bass lines walking through the neon rain,",
+            "A million shadows in a midnight train.",
+            "Snap your fingers to the urban soul,",
+            "Let the rhythm take its heavy toll.",
+            "Concrete jungle and the electric smoke,",
+            "Truth is hidden in a single joke.",
+            "The city breathes in a relentless groove,",
+            "Nothing left to lose, we've got to move."
         ],
         "tags": [
             "The Beat",
-            "Uforo"
+            "Urban"
         ]
     },
     {
-        "title": "Old Pond",
-        "author": "Matsuo Basho",
+        "id": "3",
+        "title": "Frozen Peace",
+        "author": "PhotoPoet",
         "lines": [
-            "The old pond,",
-            "A frog jumps in:",
-            "Sound of water."
+            "Peace in the wind",
+            "Softly breathing",
+            "Coming home now",
+            "Silent moments",
+            "Falling soft snow",
+            "Crystal clear air",
+            "A single gray bird",
+            "Flying so high",
+            "Quiet remains here",
+            "Under the deep sky"
         ],
         "tags": [
             "The Haiku",
+            "Peace"
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Emerald Dream",
+        "author": "PhotoPoet",
+        "lines": [
+            "Green echoes in the forest's deep embrace,",
+            "A vibrant life in every hidden glade.",
+            "Filtered sunlight on a mossy face,",
+            "Where ancient secrets in the leaf are laid.",
+            "The woods are breathing with a wild harmony,",
+            "A song of roots that reach for liberty.",
+            "We walk the path where light and shadow meet,",
+            "Feeling the pulse of earth beneath our feet.",
+            "Oh, feel the emerald spirit of the wild,",
+            "Gentle as the dreaming of a child."
+        ],
+        "tags": [
+            "Uforo",
             "Nature"
         ]
     },
     {
-        "title": "In a Station of the Metro",
-        "author": "Ezra Pound",
+        "id": "5",
+        "title": "Tidal Longing",
+        "author": "PhotoPoet",
         "lines": [
-            "The apparition of these faces in the crowd:",
-            "Petals on a wet, black bough."
+            "The ocean sighs against the jagged shore,",
+            "A restless ghost in every crashing wave.",
+            "I find myself wanting something more,",
+            "Than all the promises the salt-wind gave.",
+            "Thy memory is a tide that pulls me home,",
+            "Lost within the white and bitter foam.",
+            "I trace the lines upon the shifting sand,",
+            "Waiting for a sign from a distant land.",
+            "The deep is calling with a voice of old,",
+            "A story of a heart that once was bold."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "6",
+        "title": "Asphalt Jazz",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow cabs in a syncopated crawl,",
+            "Shadows dancing on a brickyard wall.",
+            "Saxophone weeping in an alleyway,",
+            "Closing the door on another gray day.",
+            "Listen to the static of the power lines,",
+            "Searching for the holy hidden signs.",
+            "Coffee steam and the smell of the wet tar,",
+            "Wondering exactly where we really are.",
+            "The urban pulse is a frantic melody,",
+            "Wild and lonely, trapped and finally free."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "7",
+        "title": "Silver Leaf",
+        "author": "PhotoPoet",
+        "lines": [
+            "Leaf on the water",
+            "Drifting slowly by",
+            "Autumn is here now",
+            "Silent gold color",
+            "Cold air breathing",
+            "Day is fading fast",
+            "Grey clouds gather",
+            "Resting in the dark",
+            "Nature sleeping",
+            "Until the spring light"
         ],
         "tags": [
             "The Haiku",
-            "The Beat"
+            "Autumn"
+        ]
+    },
+    {
+        "id": "8",
+        "title": "Golden Horizon",
+        "author": "PhotoPoet",
+        "lines": [
+            "Amber light upon the desert floor,",
+            "A warm welcome at the world's front door.",
+            "The dunes are shifting in a sandy dance,",
+            "Giving the parched land a second chance.",
+            "Vast and open is the morning sky,",
+            "Where golden eagles in their beauty fly.",
+            "There is no limit to the heat and space,",
+            "In this sun-drenched and ancient place.",
+            "Oh, feel the fire of the rising sphere,",
+            "Burning away every shadow and fear."
+        ],
+        "tags": [
+            "Uforo",
+            "Desert"
+        ]
+    },
+    {
+        "id": "9",
+        "title": "Moonlight Sonata",
+        "author": "PhotoPoet",
+        "lines": [
+            "Silver fingers touch the sleeping lake,",
+            "A gentle kiss that makes the lilies wake.",
+            "I watch the ripples in their silent rings,",
+            "Wondering what the midnight really brings.",
+            "Thy soul is pale beneath the lunar glow,",
+            "A secret current that only we two know.",
+            "I reach for stars that seem so very near,",
+            "Drowning out the voices of the day's fear.",
+            "The night is long and filled with silver light,",
+            "Protecting us from the burden of sight."
+        ],
+        "tags": [
+            "The Romantic",
+            "Moon"
+        ]
+    },
+    {
+        "id": "10",
+        "title": "Concrete Flow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Footsteps echo on the hollow floor,",
+            "A rhythmic knock on the city's door.",
+            "Blue smoke rising in a narrow stream,",
+            "Dancing like a ghost in a urban dream.",
+            "Keep the tempo of the traffic light,",
+            "Burning holes through the heavy night.",
+            "A million windows and a million lives,",
+            "Sharp and cutting like the subway knives.",
+            "The city's heart is a rhythmic thud,",
+            "Pumping through the asphalt like it's blood."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "11",
+        "title": "Crystal Air",
+        "author": "PhotoPoet",
+        "lines": [
+            "Mist on the mountain",
+            "Cool and white clouds",
+            "Reaching for the top",
+            "Steps in the snow",
+            "Breathes are heavy",
+            "Looking out far",
+            "Valley so small",
+            "World is quiet",
+            "Soul is light",
+            "High in the air"
+        ],
+        "tags": [
+            "The Haiku",
+            "Mountain"
+        ]
+    },
+    {
+        "id": "12",
+        "title": "Dancing Rain",
+        "author": "PhotoPoet",
+        "lines": [
+            "Diamonds falling from a heavy gray,",
+            "Washing the dust of the world away.",
+            "Rhythmic tapping on a window pane,",
+            "A celebratory and cooling rain.",
+            "The thirsty earth is drinking with a sigh,",
+            "Under the shelter of a weeping sky.",
+            "Flowers lift their heads to catch the drop,",
+            "Wishing the beauty of it would never stop.",
+            "Oh, feel the liquid music of the storm,",
+            "Keeping the spirit of the garden warm."
+        ],
+        "tags": [
+            "Uforo",
+            "Rain"
+        ]
+    },
+    {
+        "id": "13",
+        "title": "Eternal Silence",
+        "author": "PhotoPoet",
+        "lines": [
+            "The ancient hall is filled with dusty light,",
+            "Where time has lost its grip upon the night.",
+            "I hear the whispers of the years gone by,",
+            "A lonely and forgotten ghostly cry.",
+            "Thy portrait stares with eyes of painted glass,",
+            "Watching the living and the dead alike pass.",
+            "I am but a shadow in this house of bone,",
+            "Living my life in a world quite alone.",
+            "The silence is a shroud of heavy thread,",
+            "Wrapping around the memories of the dead."
+        ],
+        "tags": [
+            "The Romantic",
+            "Time"
+        ]
+    },
+    {
+        "id": "14",
+        "title": "Rhythm Rail",
+        "author": "PhotoPoet",
+        "lines": [
+            "Steel on steel in a heavy metal song,",
+            "Where the weary and the lonely belong.",
+            "Sparking tracks in a dark and dusty tunnel,",
+            "Pouring through the city's narrow funnel.",
+            "Hold on tight to the plastic and the chrome,",
+            "Searching for a place that feels like home.",
+            "Flashing lights and the roar of the machine,",
+            "Everything is dirty, everything is clean.",
+            "The subway train is a rhythmic beast,",
+            "Moving the many from the west to east."
+        ],
+        "tags": [
+            "The Beat",
+            "Subway"
+        ]
+    },
+    {
+        "id": "15",
+        "title": "Silent Path",
+        "author": "PhotoPoet",
+        "lines": [
+            "Deep in the forest",
+            "Shadows are long",
+            "Birds have gone home",
+            "Moss on the stone",
+            "River is flowing",
+            "Cold water run",
+            "Leaves are falling",
+            "Autumn is coming",
+            "Rest in the green",
+            "Until the new day"
+        ],
+        "tags": [
+            "The Haiku",
+            "Forest"
+        ]
+    },
+    {
+        "id": "16",
+        "title": "Sunlit Meadow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow flowers in a field of green,",
+            "The brightest color that I've ever seen.",
+            "Bees are humming in a busy play,",
+            "On this delicious and sunny day.",
+            "The breeze is soft as a mother's touch,",
+            "Giving us more than we need by much.",
+            "Butterflies dance in the scented air,",
+            "Without a single or heavy despair.",
+            "Oh, feel the warmth of the living sky,",
+            "Where every dream is allowed to fly."
+        ],
+        "tags": [
+            "Uforo",
+            "Meadow"
+        ]
+    },
+    {
+        "id": "17",
+        "title": "Ocean's Dirge",
+        "author": "PhotoPoet",
+        "lines": [
+            "The lighthouse beam is cutting through the fog,",
+            "A lonely entries in a sailor's log.",
+            "The sea is black and hungry for the shore,",
+            "Promising nothing but a great deal more.",
+            "Thy name is written in the salted spray,",
+            "A bitter memory that will never stay.",
+            "I watch the ships as they disappear,",
+            "Into the heart of a cold and deep fear.",
+            "The ocean's voice is a heavy sound,",
+            "Where many a heart and a soul are drowned."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "18",
+        "title": "City Sync",
+        "author": "PhotoPoet",
+        "lines": [
+            "Red and green in a flickering strobe,",
+            "Wrapping around the urbanized globe.",
+            "Screeching tires and a siren's wail,",
+            "Telling a long and a tragic city tale.",
+            "Walk the street with a syncopated stride,",
+            "Nowhere to run and nowhere to hide.",
+            "Electric energy in the humid air,",
+            "A frantic and a lonely city affair.",
+            "The rhythm of the street is a wild drum,",
+            "Waiting for the morning sun to finally come."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "19",
+        "title": "Quiet Star",
+        "author": "PhotoPoet",
+        "lines": [
+            "Night is falling",
+            "Stars are bright",
+            "Peace in the dark",
+            "Moon is silver",
+            "Cool night breeze",
+            "Soul is resting",
+            "Dreams are coming",
+            "World is sleeping",
+            "Deep and quiet",
+            "Until the dawn"
+        ],
+        "tags": [
+            "The Haiku",
+            "Night"
+        ]
+    },
+    {
+        "id": "20",
+        "title": "Breezy Morning",
+        "author": "PhotoPoet",
+        "lines": [
+            "Light pours across the waking world today,",
+            "A golden chime in every soul we see.",
+            "Dancing through the shadows in their play,",
+            "As ancient fears at last are set quite free.",
+            "The vibrant earth is singing of its grace,",
+            "Reflected in a child's bright, joyous face.",
+            "We race toward the edge of sky and sea,",
+            "To touch the heart of all we're meant to be.",
+            "Oh, feel the pulse of everything that's good,",
+            "A morning song through leaf and mountain wood."
+        ],
+        "tags": [
+            "Uforo",
+            "Light"
+        ]
+    },
+    {
+        "id": "21",
+        "title": "Gothic Whisper",
+        "author": "PhotoPoet",
+        "lines": [
+            "The shadow weeps beneath a velvet moon,",
+            "A cold desire in the midnight breeze.",
+            "My soul is tethered to a spirit tune,",
+            "Like ivy clinging to the dying trees.",
+            "Thou art the ghost that haunts my heavy deep,",
+            "While ancient memories in the darkness sleep.",
+            "I wander through the halls of what has been,",
+            "To find the truth that lies so well unseen.",
+            "The heart is but a crypt of forgotten rain,",
+            "Where silence echoes with a beautiful pain."
+        ],
+        "tags": [
+            "The Romantic",
+            "Shadow"
+        ]
+    },
+    {
+        "id": "22",
+        "title": "Subway Beat",
+        "author": "PhotoPoet",
+        "lines": [
+            "Jazz is crying in the concrete heat,",
+            "Synchronized pulses on a dirty street.",
+            "Bass lines walking through the neon rain,",
+            "A million shadows in a midnight train.",
+            "Snap your fingers to the urban soul,",
+            "Let the rhythm take its heavy toll.",
+            "Concrete jungle and the electric smoke,",
+            "Truth is hidden in a single joke.",
+            "The city breathes in a relentless groove,",
+            "Nothing left to lose, we've got to move."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "23",
+        "title": "Frozen Peace",
+        "author": "PhotoPoet",
+        "lines": [
+            "Peace in the wind",
+            "Softly breathing",
+            "Coming home now",
+            "Silent moments",
+            "Falling soft snow",
+            "Crystal clear air",
+            "A single gray bird",
+            "Flying so high",
+            "Quiet remains here",
+            "Under the deep sky"
+        ],
+        "tags": [
+            "The Haiku",
+            "Peace"
+        ]
+    },
+    {
+        "id": "24",
+        "title": "Emerald Dream",
+        "author": "PhotoPoet",
+        "lines": [
+            "Green echoes in the forest's deep embrace,",
+            "A vibrant life in every hidden glade.",
+            "Filtered sunlight on a mossy face,",
+            "Where ancient secrets in the leaf are laid.",
+            "The woods are breathing with a wild harmony,",
+            "A song of roots that reach for liberty.",
+            "We walk the path where light and shadow meet,",
+            "Feeling the pulse of earth beneath our feet.",
+            "Oh, feel the emerald spirit of the wild,",
+            "Gentle as the dreaming of a child."
+        ],
+        "tags": [
+            "Uforo",
+            "Nature"
+        ]
+    },
+    {
+        "id": "25",
+        "title": "Tidal Longing",
+        "author": "PhotoPoet",
+        "lines": [
+            "The ocean sighs against the jagged shore,",
+            "A restless ghost in every crashing wave.",
+            "I find myself wanting something more,",
+            "Than all the promises the salt-wind gave.",
+            "Thy memory is a tide that pulls me home,",
+            "Lost within the white and bitter foam.",
+            "I trace the lines upon the shifting sand,",
+            "Waiting for a sign from a distant land.",
+            "The deep is calling with a voice of old,",
+            "A story of a heart that once was bold."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "26",
+        "title": "Asphalt Jazz",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow cabs in a syncopated crawl,",
+            "Shadows dancing on a brickyard wall.",
+            "Saxophone weeping in an alleyway,",
+            "Closing the door on another gray day.",
+            "Listen to the static of the power lines,",
+            "Searching for the holy hidden signs.",
+            "Coffee steam and the smell of the wet tar,",
+            "Wondering exactly where we really are.",
+            "The urban pulse is a frantic melody,",
+            "Wild and lonely, trapped and finally free."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "27",
+        "title": "Silver Leaf",
+        "author": "PhotoPoet",
+        "lines": [
+            "Leaf on the water",
+            "Drifting slowly by",
+            "Autumn is here now",
+            "Silent gold color",
+            "Cold air breathing",
+            "Day is fading fast",
+            "Grey clouds gather",
+            "Resting in the dark",
+            "Nature sleeping",
+            "Until the spring light"
+        ],
+        "tags": [
+            "The Haiku",
+            "Autumn"
+        ]
+    },
+    {
+        "id": "28",
+        "title": "Golden Horizon",
+        "author": "PhotoPoet",
+        "lines": [
+            "Amber light upon the desert floor,",
+            "A warm welcome at the world's front door.",
+            "The dunes are shifting in a sandy dance,",
+            "Giving the parched land a second chance.",
+            "Vast and open is the morning sky,",
+            "Where golden eagles in their beauty fly.",
+            "There is no limit to the heat and space,",
+            "In this sun-drenched and ancient place.",
+            "Oh, feel the fire of the rising sphere,",
+            "Burning away every shadow and fear."
+        ],
+        "tags": [
+            "Uforo",
+            "Desert"
+        ]
+    },
+    {
+        "id": "29",
+        "title": "Moonlight Sonata",
+        "author": "PhotoPoet",
+        "lines": [
+            "Silver fingers touch the sleeping lake,",
+            "A gentle kiss that makes the lilies wake.",
+            "I watch the ripples in their silent rings,",
+            "Wondering what the midnight really brings.",
+            "Thy soul is pale beneath the lunar glow,",
+            "A secret current that only we two know.",
+            "I reach for stars that seem so very near,",
+            "Drowning out the voices of the day's fear.",
+            "The night is long and filled with silver light,",
+            "Protecting us from the burden of sight."
+        ],
+        "tags": [
+            "The Romantic",
+            "Moon"
+        ]
+    },
+    {
+        "id": "30",
+        "title": "Concrete Flow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Footsteps echo on the hollow floor,",
+            "A rhythmic knock on the city's door.",
+            "Blue smoke rising in a narrow stream,",
+            "Dancing like a ghost in a urban dream.",
+            "Keep the tempo of the traffic light,",
+            "Burning holes through the heavy night.",
+            "A million windows and a million lives,",
+            "Sharp and cutting like the subway knives.",
+            "The city's heart is a rhythmic thud,",
+            "Pumping through the asphalt like it's blood."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "31",
+        "title": "Crystal Air",
+        "author": "PhotoPoet",
+        "lines": [
+            "Mist on the mountain",
+            "Cool and white clouds",
+            "Reaching for the top",
+            "Steps in the snow",
+            "Breathes are heavy",
+            "Looking out far",
+            "Valley so small",
+            "World is quiet",
+            "Soul is light",
+            "High in the air"
+        ],
+        "tags": [
+            "The Haiku",
+            "Mountain"
+        ]
+    },
+    {
+        "id": "32",
+        "title": "Dancing Rain",
+        "author": "PhotoPoet",
+        "lines": [
+            "Diamonds falling from a heavy gray,",
+            "Washing the dust of the world away.",
+            "Rhythmic tapping on a window pane,",
+            "A celebratory and cooling rain.",
+            "The thirsty earth is drinking with a sigh,",
+            "Under the shelter of a weeping sky.",
+            "Flowers lift their heads to catch the drop,",
+            "Wishing the beauty of it would never stop.",
+            "Oh, feel the liquid music of the storm,",
+            "Keeping the spirit of the garden warm."
+        ],
+        "tags": [
+            "Uforo",
+            "Rain"
+        ]
+    },
+    {
+        "id": "33",
+        "title": "Eternal Silence",
+        "author": "PhotoPoet",
+        "lines": [
+            "The ancient hall is filled with dusty light,",
+            "Where time has lost its grip upon the night.",
+            "I hear the whispers of the years gone by,",
+            "A lonely and forgotten ghostly cry.",
+            "Thy portrait stares with eyes of painted glass,",
+            "Watching the living and the dead alike pass.",
+            "I am but a shadow in this house of bone,",
+            "Living my life in a world quite alone.",
+            "The silence is a shroud of heavy thread,",
+            "Wrapping around the memories of the dead."
+        ],
+        "tags": [
+            "The Romantic",
+            "Time"
+        ]
+    },
+    {
+        "id": "34",
+        "title": "Rhythm Rail",
+        "author": "PhotoPoet",
+        "lines": [
+            "Steel on steel in a heavy metal song,",
+            "Where the weary and the lonely belong.",
+            "Sparking tracks in a dark and dusty tunnel,",
+            "Pouring through the city's narrow funnel.",
+            "Hold on tight to the plastic and the chrome,",
+            "Searching for a place that feels like home.",
+            "Flashing lights and the roar of the machine,",
+            "Everything is dirty, everything is clean.",
+            "The subway train is a rhythmic beast,",
+            "Moving the many from the west to east."
+        ],
+        "tags": [
+            "The Beat",
+            "Subway"
+        ]
+    },
+    {
+        "id": "35",
+        "title": "Silent Path",
+        "author": "PhotoPoet",
+        "lines": [
+            "Deep in the forest",
+            "Shadows are long",
+            "Birds have gone home",
+            "Moss on the stone",
+            "River is flowing",
+            "Cold water run",
+            "Leaves are falling",
+            "Autumn is coming",
+            "Rest in the green",
+            "Until the new day"
+        ],
+        "tags": [
+            "The Haiku",
+            "Forest"
+        ]
+    },
+    {
+        "id": "36",
+        "title": "Sunlit Meadow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow flowers in a field of green,",
+            "The brightest color that I've ever seen.",
+            "Bees are humming in a busy play,",
+            "On this delicious and sunny day.",
+            "The breeze is soft as a mother's touch,",
+            "Giving us more than we need by much.",
+            "Butterflies dance in the scented air,",
+            "Without a single or heavy despair.",
+            "Oh, feel the warmth of the living sky,",
+            "Where every dream is allowed to fly."
+        ],
+        "tags": [
+            "Uforo",
+            "Meadow"
+        ]
+    },
+    {
+        "id": "37",
+        "title": "Ocean's Dirge",
+        "author": "PhotoPoet",
+        "lines": [
+            "The lighthouse beam is cutting through the fog,",
+            "A lonely entries in a sailor's log.",
+            "The sea is black and hungry for the shore,",
+            "Promising nothing but a great deal more.",
+            "Thy name is written in the salted spray,",
+            "A bitter memory that will never stay.",
+            "I watch the ships as they disappear,",
+            "Into the heart of a cold and deep fear.",
+            "The ocean's voice is a heavy sound,",
+            "Where many a heart and a soul are drowned."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "38",
+        "title": "City Sync",
+        "author": "PhotoPoet",
+        "lines": [
+            "Red and green in a flickering strobe,",
+            "Wrapping around the urbanized globe.",
+            "Screeching tires and a siren's wail,",
+            "Telling a long and a tragic city tale.",
+            "Walk the street with a syncopated stride,",
+            "Nowhere to run and nowhere to hide.",
+            "Electric energy in the humid air,",
+            "A frantic and a lonely city affair.",
+            "The rhythm of the street is a wild drum,",
+            "Waiting for the morning sun to finally come."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "39",
+        "title": "Quiet Star",
+        "author": "PhotoPoet",
+        "lines": [
+            "Night is falling",
+            "Stars are bright",
+            "Peace in the dark",
+            "Moon is silver",
+            "Cool night breeze",
+            "Soul is resting",
+            "Dreams are coming",
+            "World is sleeping",
+            "Deep and quiet",
+            "Until the dawn"
+        ],
+        "tags": [
+            "The Haiku",
+            "Night"
+        ]
+    },
+    {
+        "id": "40",
+        "title": "Breezy Morning",
+        "author": "PhotoPoet",
+        "lines": [
+            "Light pours across the waking world today,",
+            "A golden chime in every soul we see.",
+            "Dancing through the shadows in their play,",
+            "As ancient fears at last are set quite free.",
+            "The vibrant earth is singing of its grace,",
+            "Reflected in a child's bright, joyous face.",
+            "We race toward the edge of sky and sea,",
+            "To touch the heart of all we're meant to be.",
+            "Oh, feel the pulse of everything that's good,",
+            "A morning song through leaf and mountain wood."
+        ],
+        "tags": [
+            "Uforo",
+            "Light"
+        ]
+    },
+    {
+        "id": "41",
+        "title": "Gothic Whisper",
+        "author": "PhotoPoet",
+        "lines": [
+            "The shadow weeps beneath a velvet moon,",
+            "A cold desire in the midnight breeze.",
+            "My soul is tethered to a spirit tune,",
+            "Like ivy clinging to the dying trees.",
+            "Thou art the ghost that haunts my heavy deep,",
+            "While ancient memories in the darkness sleep.",
+            "I wander through the halls of what has been,",
+            "To find the truth that lies so well unseen.",
+            "The heart is but a crypt of forgotten rain,",
+            "Where silence echoes with a beautiful pain."
+        ],
+        "tags": [
+            "The Romantic",
+            "Shadow"
+        ]
+    },
+    {
+        "id": "42",
+        "title": "Subway Beat",
+        "author": "PhotoPoet",
+        "lines": [
+            "Jazz is crying in the concrete heat,",
+            "Synchronized pulses on a dirty street.",
+            "Bass lines walking through the neon rain,",
+            "A million shadows in a midnight train.",
+            "Snap your fingers to the urban soul,",
+            "Let the rhythm take its heavy toll.",
+            "Concrete jungle and the electric smoke,",
+            "Truth is hidden in a single joke.",
+            "The city breathes in a relentless groove,",
+            "Nothing left to lose, we've got to move."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "43",
+        "title": "Frozen Peace",
+        "author": "PhotoPoet",
+        "lines": [
+            "Peace in the wind",
+            "Softly breathing",
+            "Coming home now",
+            "Silent moments",
+            "Falling soft snow",
+            "Crystal clear air",
+            "A single gray bird",
+            "Flying so high",
+            "Quiet remains here",
+            "Under the deep sky"
+        ],
+        "tags": [
+            "The Haiku",
+            "Peace"
+        ]
+    },
+    {
+        "id": "44",
+        "title": "Emerald Dream",
+        "author": "PhotoPoet",
+        "lines": [
+            "Green echoes in the forest's deep embrace,",
+            "A vibrant life in every hidden glade.",
+            "Filtered sunlight on a mossy face,",
+            "Where ancient secrets in the leaf are laid.",
+            "The woods are breathing with a wild harmony,",
+            "A song of roots that reach for liberty.",
+            "We walk the path where light and shadow meet,",
+            "Feeling the pulse of earth beneath our feet.",
+            "Oh, feel the emerald spirit of the wild,",
+            "Gentle as the dreaming of a child."
+        ],
+        "tags": [
+            "Uforo",
+            "Nature"
+        ]
+    },
+    {
+        "id": "45",
+        "title": "Tidal Longing",
+        "author": "PhotoPoet",
+        "lines": [
+            "The ocean sighs against the jagged shore,",
+            "A restless ghost in every crashing wave.",
+            "I find myself wanting something more,",
+            "Than all the promises the salt-wind gave.",
+            "Thy memory is a tide that pulls me home,",
+            "Lost within the white and bitter foam.",
+            "I trace the lines upon the shifting sand,",
+            "Waiting for a sign from a distant land.",
+            "The deep is calling with a voice of old,",
+            "A story of a heart that once was bold."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "46",
+        "title": "Asphalt Jazz",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow cabs in a syncopated crawl,",
+            "Shadows dancing on a brickyard wall.",
+            "Saxophone weeping in an alleyway,",
+            "Closing the door on another gray day.",
+            "Listen to the static of the power lines,",
+            "Searching for the holy hidden signs.",
+            "Coffee steam and the smell of the wet tar,",
+            "Wondering exactly where we really are.",
+            "The urban pulse is a frantic melody,",
+            "Wild and lonely, trapped and finally free."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "47",
+        "title": "Silver Leaf",
+        "author": "PhotoPoet",
+        "lines": [
+            "Leaf on the water",
+            "Drifting slowly by",
+            "Autumn is here now",
+            "Silent gold color",
+            "Cold air breathing",
+            "Day is fading fast",
+            "Grey clouds gather",
+            "Resting in the dark",
+            "Nature sleeping",
+            "Until the spring light"
+        ],
+        "tags": [
+            "The Haiku",
+            "Autumn"
+        ]
+    },
+    {
+        "id": "48",
+        "title": "Golden Horizon",
+        "author": "PhotoPoet",
+        "lines": [
+            "Amber light upon the desert floor,",
+            "A warm welcome at the world's front door.",
+            "The dunes are shifting in a sandy dance,",
+            "Giving the parched land a second chance.",
+            "Vast and open is the morning sky,",
+            "Where golden eagles in their beauty fly.",
+            "There is no limit to the heat and space,",
+            "In this sun-drenched and ancient place.",
+            "Oh, feel the fire of the rising sphere,",
+            "Burning away every shadow and fear."
+        ],
+        "tags": [
+            "Uforo",
+            "Desert"
+        ]
+    },
+    {
+        "id": "49",
+        "title": "Moonlight Sonata",
+        "author": "PhotoPoet",
+        "lines": [
+            "Silver fingers touch the sleeping lake,",
+            "A gentle kiss that makes the lilies wake.",
+            "I watch the ripples in their silent rings,",
+            "Wondering what the midnight really brings.",
+            "Thy soul is pale beneath the lunar glow,",
+            "A secret current that only we two know.",
+            "I reach for stars that seem so very near,",
+            "Drowning out the voices of the day's fear.",
+            "The night is long and filled with silver light,",
+            "Protecting us from the burden of sight."
+        ],
+        "tags": [
+            "The Romantic",
+            "Moon"
+        ]
+    },
+    {
+        "id": "50",
+        "title": "Concrete Flow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Footsteps echo on the hollow floor,",
+            "A rhythmic knock on the city's door.",
+            "Blue smoke rising in a narrow stream,",
+            "Dancing like a ghost in a urban dream.",
+            "Keep the tempo of the traffic light,",
+            "Burning holes through the heavy night.",
+            "A million windows and a million lives,",
+            "Sharp and cutting like the subway knives.",
+            "The city's heart is a rhythmic thud,",
+            "Pumping through the asphalt like it's blood."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "51",
+        "title": "Crystal Air",
+        "author": "PhotoPoet",
+        "lines": [
+            "Mist on the mountain",
+            "Cool and white clouds",
+            "Reaching for the top",
+            "Steps in the snow",
+            "Breathes are heavy",
+            "Looking out far",
+            "Valley so small",
+            "World is quiet",
+            "Soul is light",
+            "High in the air"
+        ],
+        "tags": [
+            "The Haiku",
+            "Mountain"
+        ]
+    },
+    {
+        "id": "52",
+        "title": "Dancing Rain",
+        "author": "PhotoPoet",
+        "lines": [
+            "Diamonds falling from a heavy gray,",
+            "Washing the dust of the world away.",
+            "Rhythmic tapping on a window pane,",
+            "A celebratory and cooling rain.",
+            "The thirsty earth is drinking with a sigh,",
+            "Under the shelter of a weeping sky.",
+            "Flowers lift their heads to catch the drop,",
+            "Wishing the beauty of it would never stop.",
+            "Oh, feel the liquid music of the storm,",
+            "Keeping the spirit of the garden warm."
+        ],
+        "tags": [
+            "Uforo",
+            "Rain"
+        ]
+    },
+    {
+        "id": "53",
+        "title": "Eternal Silence",
+        "author": "PhotoPoet",
+        "lines": [
+            "The ancient hall is filled with dusty light,",
+            "Where time has lost its grip upon the night.",
+            "I hear the whispers of the years gone by,",
+            "A lonely and forgotten ghostly cry.",
+            "Thy portrait stares with eyes of painted glass,",
+            "Watching the living and the dead alike pass.",
+            "I am but a shadow in this house of bone,",
+            "Living my life in a world quite alone.",
+            "The silence is a shroud of heavy thread,",
+            "Wrapping around the memories of the dead."
+        ],
+        "tags": [
+            "The Romantic",
+            "Time"
+        ]
+    },
+    {
+        "id": "54",
+        "title": "Rhythm Rail",
+        "author": "PhotoPoet",
+        "lines": [
+            "Steel on steel in a heavy metal song,",
+            "Where the weary and the lonely belong.",
+            "Sparking tracks in a dark and dusty tunnel,",
+            "Pouring through the city's narrow funnel.",
+            "Hold on tight to the plastic and the chrome,",
+            "Searching for a place that feels like home.",
+            "Flashing lights and the roar of the machine,",
+            "Everything is dirty, everything is clean.",
+            "The subway train is a rhythmic beast,",
+            "Moving the many from the west to east."
+        ],
+        "tags": [
+            "The Beat",
+            "Subway"
+        ]
+    },
+    {
+        "id": "55",
+        "title": "Silent Path",
+        "author": "PhotoPoet",
+        "lines": [
+            "Deep in the forest",
+            "Shadows are long",
+            "Birds have gone home",
+            "Moss on the stone",
+            "River is flowing",
+            "Cold water run",
+            "Leaves are falling",
+            "Autumn is coming",
+            "Rest in the green",
+            "Until the new day"
+        ],
+        "tags": [
+            "The Haiku",
+            "Forest"
+        ]
+    },
+    {
+        "id": "56",
+        "title": "Sunlit Meadow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow flowers in a field of green,",
+            "The brightest color that I've ever seen.",
+            "Bees are humming in a busy play,",
+            "On this delicious and sunny day.",
+            "The breeze is soft as a mother's touch,",
+            "Giving us more than we need by much.",
+            "Butterflies dance in the scented air,",
+            "Without a single or heavy despair.",
+            "Oh, feel the warmth of the living sky,",
+            "Where every dream is allowed to fly."
+        ],
+        "tags": [
+            "Uforo",
+            "Meadow"
+        ]
+    },
+    {
+        "id": "57",
+        "title": "Ocean's Dirge",
+        "author": "PhotoPoet",
+        "lines": [
+            "The lighthouse beam is cutting through the fog,",
+            "A lonely entries in a sailor's log.",
+            "The sea is black and hungry for the shore,",
+            "Promising nothing but a great deal more.",
+            "Thy name is written in the salted spray,",
+            "A bitter memory that will never stay.",
+            "I watch the ships as they disappear,",
+            "Into the heart of a cold and deep fear.",
+            "The ocean's voice is a heavy sound,",
+            "Where many a heart and a soul are drowned."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "58",
+        "title": "City Sync",
+        "author": "PhotoPoet",
+        "lines": [
+            "Red and green in a flickering strobe,",
+            "Wrapping around the urbanized globe.",
+            "Screeching tires and a siren's wail,",
+            "Telling a long and a tragic city tale.",
+            "Walk the street with a syncopated stride,",
+            "Nowhere to run and nowhere to hide.",
+            "Electric energy in the humid air,",
+            "A frantic and a lonely city affair.",
+            "The rhythm of the street is a wild drum,",
+            "Waiting for the morning sun to finally come."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "59",
+        "title": "Quiet Star",
+        "author": "PhotoPoet",
+        "lines": [
+            "Night is falling",
+            "Stars are bright",
+            "Peace in the dark",
+            "Moon is silver",
+            "Cool night breeze",
+            "Soul is resting",
+            "Dreams are coming",
+            "World is sleeping",
+            "Deep and quiet",
+            "Until the dawn"
+        ],
+        "tags": [
+            "The Haiku",
+            "Night"
+        ]
+    },
+    {
+        "id": "60",
+        "title": "Breezy Morning",
+        "author": "PhotoPoet",
+        "lines": [
+            "Light pours across the waking world today,",
+            "A golden chime in every soul we see.",
+            "Dancing through the shadows in their play,",
+            "As ancient fears at last are set quite free.",
+            "The vibrant earth is singing of its grace,",
+            "Reflected in a child's bright, joyous face.",
+            "We race toward the edge of sky and sea,",
+            "To touch the heart of all we're meant to be.",
+            "Oh, feel the pulse of everything that's good,",
+            "A morning song through leaf and mountain wood."
+        ],
+        "tags": [
+            "Uforo",
+            "Light"
+        ]
+    },
+    {
+        "id": "61",
+        "title": "Gothic Whisper",
+        "author": "PhotoPoet",
+        "lines": [
+            "The shadow weeps beneath a velvet moon,",
+            "A cold desire in the midnight breeze.",
+            "My soul is tethered to a spirit tune,",
+            "Like ivy clinging to the dying trees.",
+            "Thou art the ghost that haunts my heavy deep,",
+            "While ancient memories in the darkness sleep.",
+            "I wander through the halls of what has been,",
+            "To find the truth that lies so well unseen.",
+            "The heart is but a crypt of forgotten rain,",
+            "Where silence echoes with a beautiful pain."
+        ],
+        "tags": [
+            "The Romantic",
+            "Shadow"
+        ]
+    },
+    {
+        "id": "62",
+        "title": "Subway Beat",
+        "author": "PhotoPoet",
+        "lines": [
+            "Jazz is crying in the concrete heat,",
+            "Synchronized pulses on a dirty street.",
+            "Bass lines walking through the neon rain,",
+            "A million shadows in a midnight train.",
+            "Snap your fingers to the urban soul,",
+            "Let the rhythm take its heavy toll.",
+            "Concrete jungle and the electric smoke,",
+            "Truth is hidden in a single joke.",
+            "The city breathes in a relentless groove,",
+            "Nothing left to lose, we've got to move."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "63",
+        "title": "Frozen Peace",
+        "author": "PhotoPoet",
+        "lines": [
+            "Peace in the wind",
+            "Softly breathing",
+            "Coming home now",
+            "Silent moments",
+            "Falling soft snow",
+            "Crystal clear air",
+            "A single gray bird",
+            "Flying so high",
+            "Quiet remains here",
+            "Under the deep sky"
+        ],
+        "tags": [
+            "The Haiku",
+            "Peace"
+        ]
+    },
+    {
+        "id": "64",
+        "title": "Emerald Dream",
+        "author": "PhotoPoet",
+        "lines": [
+            "Green echoes in the forest's deep embrace,",
+            "A vibrant life in every hidden glade.",
+            "Filtered sunlight on a mossy face,",
+            "Where ancient secrets in the leaf are laid.",
+            "The woods are breathing with a wild harmony,",
+            "A song of roots that reach for liberty.",
+            "We walk the path where light and shadow meet,",
+            "Feeling the pulse of earth beneath our feet.",
+            "Oh, feel the emerald spirit of the wild,",
+            "Gentle as the dreaming of a child."
+        ],
+        "tags": [
+            "Uforo",
+            "Nature"
+        ]
+    },
+    {
+        "id": "65",
+        "title": "Tidal Longing",
+        "author": "PhotoPoet",
+        "lines": [
+            "The ocean sighs against the jagged shore,",
+            "A restless ghost in every crashing wave.",
+            "I find myself wanting something more,",
+            "Than all the promises the salt-wind gave.",
+            "Thy memory is a tide that pulls me home,",
+            "Lost within the white and bitter foam.",
+            "I trace the lines upon the shifting sand,",
+            "Waiting for a sign from a distant land.",
+            "The deep is calling with a voice of old,",
+            "A story of a heart that once was bold."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "66",
+        "title": "Asphalt Jazz",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow cabs in a syncopated crawl,",
+            "Shadows dancing on a brickyard wall.",
+            "Saxophone weeping in an alleyway,",
+            "Closing the door on another gray day.",
+            "Listen to the static of the power lines,",
+            "Searching for the holy hidden signs.",
+            "Coffee steam and the smell of the wet tar,",
+            "Wondering exactly where we really are.",
+            "The urban pulse is a frantic melody,",
+            "Wild and lonely, trapped and finally free."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "67",
+        "title": "Silver Leaf",
+        "author": "PhotoPoet",
+        "lines": [
+            "Leaf on the water",
+            "Drifting slowly by",
+            "Autumn is here now",
+            "Silent gold color",
+            "Cold air breathing",
+            "Day is fading fast",
+            "Grey clouds gather",
+            "Resting in the dark",
+            "Nature sleeping",
+            "Until the spring light"
+        ],
+        "tags": [
+            "The Haiku",
+            "Autumn"
+        ]
+    },
+    {
+        "id": "68",
+        "title": "Golden Horizon",
+        "author": "PhotoPoet",
+        "lines": [
+            "Amber light upon the desert floor,",
+            "A warm welcome at the world's front door.",
+            "The dunes are shifting in a sandy dance,",
+            "Giving the parched land a second chance.",
+            "Vast and open is the morning sky,",
+            "Where golden eagles in their beauty fly.",
+            "There is no limit to the heat and space,",
+            "In this sun-drenched and ancient place.",
+            "Oh, feel the fire of the rising sphere,",
+            "Burning away every shadow and fear."
+        ],
+        "tags": [
+            "Uforo",
+            "Desert"
+        ]
+    },
+    {
+        "id": "69",
+        "title": "Moonlight Sonata",
+        "author": "PhotoPoet",
+        "lines": [
+            "Silver fingers touch the sleeping lake,",
+            "A gentle kiss that makes the lilies wake.",
+            "I watch the ripples in their silent rings,",
+            "Wondering what the midnight really brings.",
+            "Thy soul is pale beneath the lunar glow,",
+            "A secret current that only we two know.",
+            "I reach for stars that seem so very near,",
+            "Drowning out the voices of the day's fear.",
+            "The night is long and filled with silver light,",
+            "Protecting us from the burden of sight."
+        ],
+        "tags": [
+            "The Romantic",
+            "Moon"
+        ]
+    },
+    {
+        "id": "70",
+        "title": "Concrete Flow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Footsteps echo on the hollow floor,",
+            "A rhythmic knock on the city's door.",
+            "Blue smoke rising in a narrow stream,",
+            "Dancing like a ghost in a urban dream.",
+            "Keep the tempo of the traffic light,",
+            "Burning holes through the heavy night.",
+            "A million windows and a million lives,",
+            "Sharp and cutting like the subway knives.",
+            "The city's heart is a rhythmic thud,",
+            "Pumping through the asphalt like it's blood."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "71",
+        "title": "Crystal Air",
+        "author": "PhotoPoet",
+        "lines": [
+            "Mist on the mountain",
+            "Cool and white clouds",
+            "Reaching for the top",
+            "Steps in the snow",
+            "Breathes are heavy",
+            "Looking out far",
+            "Valley so small",
+            "World is quiet",
+            "Soul is light",
+            "High in the air"
+        ],
+        "tags": [
+            "The Haiku",
+            "Mountain"
+        ]
+    },
+    {
+        "id": "72",
+        "title": "Dancing Rain",
+        "author": "PhotoPoet",
+        "lines": [
+            "Diamonds falling from a heavy gray,",
+            "Washing the dust of the world away.",
+            "Rhythmic tapping on a window pane,",
+            "A celebratory and cooling rain.",
+            "The thirsty earth is drinking with a sigh,",
+            "Under the shelter of a weeping sky.",
+            "Flowers lift their heads to catch the drop,",
+            "Wishing the beauty of it would never stop.",
+            "Oh, feel the liquid music of the storm,",
+            "Keeping the spirit of the garden warm."
+        ],
+        "tags": [
+            "Uforo",
+            "Rain"
+        ]
+    },
+    {
+        "id": "73",
+        "title": "Eternal Silence",
+        "author": "PhotoPoet",
+        "lines": [
+            "The ancient hall is filled with dusty light,",
+            "Where time has lost its grip upon the night.",
+            "I hear the whispers of the years gone by,",
+            "A lonely and forgotten ghostly cry.",
+            "Thy portrait stares with eyes of painted glass,",
+            "Watching the living and the dead alike pass.",
+            "I am but a shadow in this house of bone,",
+            "Living my life in a world quite alone.",
+            "The silence is a shroud of heavy thread,",
+            "Wrapping around the memories of the dead."
+        ],
+        "tags": [
+            "The Romantic",
+            "Time"
+        ]
+    },
+    {
+        "id": "74",
+        "title": "Rhythm Rail",
+        "author": "PhotoPoet",
+        "lines": [
+            "Steel on steel in a heavy metal song,",
+            "Where the weary and the lonely belong.",
+            "Sparking tracks in a dark and dusty tunnel,",
+            "Pouring through the city's narrow funnel.",
+            "Hold on tight to the plastic and the chrome,",
+            "Searching for a place that feels like home.",
+            "Flashing lights and the roar of the machine,",
+            "Everything is dirty, everything is clean.",
+            "The subway train is a rhythmic beast,",
+            "Moving the many from the west to east."
+        ],
+        "tags": [
+            "The Beat",
+            "Subway"
+        ]
+    },
+    {
+        "id": "75",
+        "title": "Silent Path",
+        "author": "PhotoPoet",
+        "lines": [
+            "Deep in the forest",
+            "Shadows are long",
+            "Birds have gone home",
+            "Moss on the stone",
+            "River is flowing",
+            "Cold water run",
+            "Leaves are falling",
+            "Autumn is coming",
+            "Rest in the green",
+            "Until the new day"
+        ],
+        "tags": [
+            "The Haiku",
+            "Forest"
+        ]
+    },
+    {
+        "id": "76",
+        "title": "Sunlit Meadow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow flowers in a field of green,",
+            "The brightest color that I've ever seen.",
+            "Bees are humming in a busy play,",
+            "On this delicious and sunny day.",
+            "The breeze is soft as a mother's touch,",
+            "Giving us more than we need by much.",
+            "Butterflies dance in the scented air,",
+            "Without a single or heavy despair.",
+            "Oh, feel the warmth of the living sky,",
+            "Where every dream is allowed to fly."
+        ],
+        "tags": [
+            "Uforo",
+            "Meadow"
+        ]
+    },
+    {
+        "id": "77",
+        "title": "Ocean's Dirge",
+        "author": "PhotoPoet",
+        "lines": [
+            "The lighthouse beam is cutting through the fog,",
+            "A lonely entries in a sailor's log.",
+            "The sea is black and hungry for the shore,",
+            "Promising nothing but a great deal more.",
+            "Thy name is written in the salted spray,",
+            "A bitter memory that will never stay.",
+            "I watch the ships as they disappear,",
+            "Into the heart of a cold and deep fear.",
+            "The ocean's voice is a heavy sound,",
+            "Where many a heart and a soul are drowned."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "78",
+        "title": "City Sync",
+        "author": "PhotoPoet",
+        "lines": [
+            "Red and green in a flickering strobe,",
+            "Wrapping around the urbanized globe.",
+            "Screeching tires and a siren's wail,",
+            "Telling a long and a tragic city tale.",
+            "Walk the street with a syncopated stride,",
+            "Nowhere to run and nowhere to hide.",
+            "Electric energy in the humid air,",
+            "A frantic and a lonely city affair.",
+            "The rhythm of the street is a wild drum,",
+            "Waiting for the morning sun to finally come."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "79",
+        "title": "Quiet Star",
+        "author": "PhotoPoet",
+        "lines": [
+            "Night is falling",
+            "Stars are bright",
+            "Peace in the dark",
+            "Moon is silver",
+            "Cool night breeze",
+            "Soul is resting",
+            "Dreams are coming",
+            "World is sleeping",
+            "Deep and quiet",
+            "Until the dawn"
+        ],
+        "tags": [
+            "The Haiku",
+            "Night"
+        ]
+    },
+    {
+        "id": "80",
+        "title": "Breezy Morning",
+        "author": "PhotoPoet",
+        "lines": [
+            "Light pours across the waking world today,",
+            "A golden chime in every soul we see.",
+            "Dancing through the shadows in their play,",
+            "As ancient fears at last are set quite free.",
+            "The vibrant earth is singing of its grace,",
+            "Reflected in a child's bright, joyous face.",
+            "We race toward the edge of sky and sea,",
+            "To touch the heart of all we're meant to be.",
+            "Oh, feel the pulse of everything that's good,",
+            "A morning song through leaf and mountain wood."
+        ],
+        "tags": [
+            "Uforo",
+            "Light"
+        ]
+    },
+    {
+        "id": "81",
+        "title": "Gothic Whisper",
+        "author": "PhotoPoet",
+        "lines": [
+            "The shadow weeps beneath a velvet moon,",
+            "A cold desire in the midnight breeze.",
+            "My soul is tethered to a spirit tune,",
+            "Like ivy clinging to the dying trees.",
+            "Thou art the ghost that haunts my heavy deep,",
+            "While ancient memories in the darkness sleep.",
+            "I wander through the halls of what has been,",
+            "To find the truth that lies so well unseen.",
+            "The heart is but a crypt of forgotten rain,",
+            "Where silence echoes with a beautiful pain."
+        ],
+        "tags": [
+            "The Romantic",
+            "Shadow"
+        ]
+    },
+    {
+        "id": "82",
+        "title": "Subway Beat",
+        "author": "PhotoPoet",
+        "lines": [
+            "Jazz is crying in the concrete heat,",
+            "Synchronized pulses on a dirty street.",
+            "Bass lines walking through the neon rain,",
+            "A million shadows in a midnight train.",
+            "Snap your fingers to the urban soul,",
+            "Let the rhythm take its heavy toll.",
+            "Concrete jungle and the electric smoke,",
+            "Truth is hidden in a single joke.",
+            "The city breathes in a relentless groove,",
+            "Nothing left to lose, we've got to move."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "83",
+        "title": "Frozen Peace",
+        "author": "PhotoPoet",
+        "lines": [
+            "Peace in the wind",
+            "Softly breathing",
+            "Coming home now",
+            "Silent moments",
+            "Falling soft snow",
+            "Crystal clear air",
+            "A single gray bird",
+            "Flying so high",
+            "Quiet remains here",
+            "Under the deep sky"
+        ],
+        "tags": [
+            "The Haiku",
+            "Peace"
+        ]
+    },
+    {
+        "id": "84",
+        "title": "Emerald Dream",
+        "author": "PhotoPoet",
+        "lines": [
+            "Green echoes in the forest's deep embrace,",
+            "A vibrant life in every hidden glade.",
+            "Filtered sunlight on a mossy face,",
+            "Where ancient secrets in the leaf are laid.",
+            "The woods are breathing with a wild harmony,",
+            "A song of roots that reach for liberty.",
+            "We walk the path where light and shadow meet,",
+            "Feeling the pulse of earth beneath our feet.",
+            "Oh, feel the emerald spirit of the wild,",
+            "Gentle as the dreaming of a child."
+        ],
+        "tags": [
+            "Uforo",
+            "Nature"
+        ]
+    },
+    {
+        "id": "85",
+        "title": "Tidal Longing",
+        "author": "PhotoPoet",
+        "lines": [
+            "The ocean sighs against the jagged shore,",
+            "A restless ghost in every crashing wave.",
+            "I find myself wanting something more,",
+            "Than all the promises the salt-wind gave.",
+            "Thy memory is a tide that pulls me home,",
+            "Lost within the white and bitter foam.",
+            "I trace the lines upon the shifting sand,",
+            "Waiting for a sign from a distant land.",
+            "The deep is calling with a voice of old,",
+            "A story of a heart that once was bold."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "86",
+        "title": "Asphalt Jazz",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow cabs in a syncopated crawl,",
+            "Shadows dancing on a brickyard wall.",
+            "Saxophone weeping in an alleyway,",
+            "Closing the door on another gray day.",
+            "Listen to the static of the power lines,",
+            "Searching for the holy hidden signs.",
+            "Coffee steam and the smell of the wet tar,",
+            "Wondering exactly where we really are.",
+            "The urban pulse is a frantic melody,",
+            "Wild and lonely, trapped and finally free."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "87",
+        "title": "Silver Leaf",
+        "author": "PhotoPoet",
+        "lines": [
+            "Leaf on the water",
+            "Drifting slowly by",
+            "Autumn is here now",
+            "Silent gold color",
+            "Cold air breathing",
+            "Day is fading fast",
+            "Grey clouds gather",
+            "Resting in the dark",
+            "Nature sleeping",
+            "Until the spring light"
+        ],
+        "tags": [
+            "The Haiku",
+            "Autumn"
+        ]
+    },
+    {
+        "id": "88",
+        "title": "Golden Horizon",
+        "author": "PhotoPoet",
+        "lines": [
+            "Amber light upon the desert floor,",
+            "A warm welcome at the world's front door.",
+            "The dunes are shifting in a sandy dance,",
+            "Giving the parched land a second chance.",
+            "Vast and open is the morning sky,",
+            "Where golden eagles in their beauty fly.",
+            "There is no limit to the heat and space,",
+            "In this sun-drenched and ancient place.",
+            "Oh, feel the fire of the rising sphere,",
+            "Burning away every shadow and fear."
+        ],
+        "tags": [
+            "Uforo",
+            "Desert"
+        ]
+    },
+    {
+        "id": "89",
+        "title": "Moonlight Sonata",
+        "author": "PhotoPoet",
+        "lines": [
+            "Silver fingers touch the sleeping lake,",
+            "A gentle kiss that makes the lilies wake.",
+            "I watch the ripples in their silent rings,",
+            "Wondering what the midnight really brings.",
+            "Thy soul is pale beneath the lunar glow,",
+            "A secret current that only we two know.",
+            "I reach for stars that seem so very near,",
+            "Drowning out the voices of the day's fear.",
+            "The night is long and filled with silver light,",
+            "Protecting us from the burden of sight."
+        ],
+        "tags": [
+            "The Romantic",
+            "Moon"
+        ]
+    },
+    {
+        "id": "90",
+        "title": "Concrete Flow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Footsteps echo on the hollow floor,",
+            "A rhythmic knock on the city's door.",
+            "Blue smoke rising in a narrow stream,",
+            "Dancing like a ghost in a urban dream.",
+            "Keep the tempo of the traffic light,",
+            "Burning holes through the heavy night.",
+            "A million windows and a million lives,",
+            "Sharp and cutting like the subway knives.",
+            "The city's heart is a rhythmic thud,",
+            "Pumping through the asphalt like it's blood."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "91",
+        "title": "Crystal Air",
+        "author": "PhotoPoet",
+        "lines": [
+            "Mist on the mountain",
+            "Cool and white clouds",
+            "Reaching for the top",
+            "Steps in the snow",
+            "Breathes are heavy",
+            "Looking out far",
+            "Valley so small",
+            "World is quiet",
+            "Soul is light",
+            "High in the air"
+        ],
+        "tags": [
+            "The Haiku",
+            "Mountain"
+        ]
+    },
+    {
+        "id": "92",
+        "title": "Dancing Rain",
+        "author": "PhotoPoet",
+        "lines": [
+            "Diamonds falling from a heavy gray,",
+            "Washing the dust of the world away.",
+            "Rhythmic tapping on a window pane,",
+            "A celebratory and cooling rain.",
+            "The thirsty earth is drinking with a sigh,",
+            "Under the shelter of a weeping sky.",
+            "Flowers lift their heads to catch the drop,",
+            "Wishing the beauty of it would never stop.",
+            "Oh, feel the liquid music of the storm,",
+            "Keeping the spirit of the garden warm."
+        ],
+        "tags": [
+            "Uforo",
+            "Rain"
+        ]
+    },
+    {
+        "id": "93",
+        "title": "Eternal Silence",
+        "author": "PhotoPoet",
+        "lines": [
+            "The ancient hall is filled with dusty light,",
+            "Where time has lost its grip upon the night.",
+            "I hear the whispers of the years gone by,",
+            "A lonely and forgotten ghostly cry.",
+            "Thy portrait stares with eyes of painted glass,",
+            "Watching the living and the dead alike pass.",
+            "I am but a shadow in this house of bone,",
+            "Living my life in a world quite alone.",
+            "The silence is a shroud of heavy thread,",
+            "Wrapping around the memories of the dead."
+        ],
+        "tags": [
+            "The Romantic",
+            "Time"
+        ]
+    },
+    {
+        "id": "94",
+        "title": "Rhythm Rail",
+        "author": "PhotoPoet",
+        "lines": [
+            "Steel on steel in a heavy metal song,",
+            "Where the weary and the lonely belong.",
+            "Sparking tracks in a dark and dusty tunnel,",
+            "Pouring through the city's narrow funnel.",
+            "Hold on tight to the plastic and the chrome,",
+            "Searching for a place that feels like home.",
+            "Flashing lights and the roar of the machine,",
+            "Everything is dirty, everything is clean.",
+            "The subway train is a rhythmic beast,",
+            "Moving the many from the west to east."
+        ],
+        "tags": [
+            "The Beat",
+            "Subway"
+        ]
+    },
+    {
+        "id": "95",
+        "title": "Silent Path",
+        "author": "PhotoPoet",
+        "lines": [
+            "Deep in the forest",
+            "Shadows are long",
+            "Birds have gone home",
+            "Moss on the stone",
+            "River is flowing",
+            "Cold water run",
+            "Leaves are falling",
+            "Autumn is coming",
+            "Rest in the green",
+            "Until the new day"
+        ],
+        "tags": [
+            "The Haiku",
+            "Forest"
+        ]
+    },
+    {
+        "id": "96",
+        "title": "Sunlit Meadow",
+        "author": "PhotoPoet",
+        "lines": [
+            "Yellow flowers in a field of green,",
+            "The brightest color that I've ever seen.",
+            "Bees are humming in a busy play,",
+            "On this delicious and sunny day.",
+            "The breeze is soft as a mother's touch,",
+            "Giving us more than we need by much.",
+            "Butterflies dance in the scented air,",
+            "Without a single or heavy despair.",
+            "Oh, feel the warmth of the living sky,",
+            "Where every dream is allowed to fly."
+        ],
+        "tags": [
+            "Uforo",
+            "Meadow"
+        ]
+    },
+    {
+        "id": "97",
+        "title": "Ocean's Dirge",
+        "author": "PhotoPoet",
+        "lines": [
+            "The lighthouse beam is cutting through the fog,",
+            "A lonely entries in a sailor's log.",
+            "The sea is black and hungry for the shore,",
+            "Promising nothing but a great deal more.",
+            "Thy name is written in the salted spray,",
+            "A bitter memory that will never stay.",
+            "I watch the ships as they disappear,",
+            "Into the heart of a cold and deep fear.",
+            "The ocean's voice is a heavy sound,",
+            "Where many a heart and a soul are drowned."
+        ],
+        "tags": [
+            "The Romantic",
+            "Ocean"
+        ]
+    },
+    {
+        "id": "98",
+        "title": "City Sync",
+        "author": "PhotoPoet",
+        "lines": [
+            "Red and green in a flickering strobe,",
+            "Wrapping around the urbanized globe.",
+            "Screeching tires and a siren's wail,",
+            "Telling a long and a tragic city tale.",
+            "Walk the street with a syncopated stride,",
+            "Nowhere to run and nowhere to hide.",
+            "Electric energy in the humid air,",
+            "A frantic and a lonely city affair.",
+            "The rhythm of the street is a wild drum,",
+            "Waiting for the morning sun to finally come."
+        ],
+        "tags": [
+            "The Beat",
+            "City"
+        ]
+    },
+    {
+        "id": "99",
+        "title": "Quiet Star",
+        "author": "PhotoPoet",
+        "lines": [
+            "Night is falling",
+            "Stars are bright",
+            "Peace in the dark",
+            "Moon is silver",
+            "Cool night breeze",
+            "Soul is resting",
+            "Dreams are coming",
+            "World is sleeping",
+            "Deep and quiet",
+            "Until the dawn"
+        ],
+        "tags": [
+            "The Haiku",
+            "Night"
+        ]
+    },
+    {
+        "id": "100",
+        "title": "Breezy Morning",
+        "author": "PhotoPoet",
+        "lines": [
+            "Light pours across the waking world today,",
+            "A golden chime in every soul we see.",
+            "Dancing through the shadows in their play,",
+            "As ancient fears at last are set quite free.",
+            "The vibrant earth is singing of its grace,",
+            "Reflected in a child's bright, joyous face.",
+            "We race toward the edge of sky and sea,",
+            "To touch the heart of all we're meant to be.",
+            "Oh, feel the pulse of everything that's good,",
+            "A morning song through leaf and mountain wood."
+        ],
+        "tags": [
+            "Uforo",
+            "Light"
+        ]
+    },
+    {
+        "id": "101",
+        "title": "Gothic Whisper",
+        "author": "PhotoPoet",
+        "lines": [
+            "The shadow weeps beneath a velvet moon,",
+            "A cold desire in the midnight breeze.",
+            "My soul is tethered to a spirit tune,",
+            "Like ivy clinging to the dying trees.",
+            "Thou art the ghost that haunts my heavy deep,",
+            "While ancient memories in the darkness sleep.",
+            "I wander through the halls of what has been,",
+            "To find the truth that lies so well unseen.",
+            "The heart is but a crypt of forgotten rain,",
+            "Where silence echoes with a beautiful pain."
+        ],
+        "tags": [
+            "The Romantic",
+            "Shadow"
+        ]
+    },
+    {
+        "id": "102",
+        "title": "Subway Beat",
+        "author": "PhotoPoet",
+        "lines": [
+            "Jazz is crying in the concrete heat,",
+            "Synchronized pulses on a dirty street.",
+            "Bass lines walking through the neon rain,",
+            "A million shadows in a midnight train.",
+            "Snap your fingers to the urban soul,",
+            "Let the rhythm take its heavy toll.",
+            "Concrete jungle and the electric smoke,",
+            "Truth is hidden in a single joke.",
+            "The city breathes in a relentless groove,",
+            "Nothing left to lose, we've got to move."
+        ],
+        "tags": [
+            "The Beat",
+            "Urban"
+        ]
+    },
+    {
+        "id": "103",
+        "title": "Frozen Peace",
+        "author": "PhotoPoet",
+        "lines": [
+            "Peace in the wind",
+            "Softly breathing",
+            "Coming home now",
+            "Silent moments",
+            "Falling soft snow",
+            "Crystal clear air",
+            "A single gray bird",
+            "Flying so high",
+            "Quiet remains here",
+            "Under the deep sky"
+        ],
+        "tags": [
+            "The Haiku",
+            "Peace"
+        ]
+    },
+    {
+        "id": "104",
+        "title": "Emerald Dream",
+        "author": "PhotoPoet",
+        "lines": [
+            "Green echoes in the forest's deep embrace,",
+            "A vibrant life in every hidden glade.",
+            "Filtered sunlight on a mossy face,",
+            "Where ancient secrets in the leaf are laid.",
+            "The woods are breathing with a wild harmony,",
+            "A song of roots that reach for liberty.",
+            "We walk the path where light and shadow meet,",
+            "Feeling the pulse of earth beneath our feet.",
+            "Oh, feel the emerald spirit of the wild,",
+            "Gentle as the dreaming of a child."
+        ],
+        "tags": [
+            "Uforo",
+            "Nature"
         ]
     }
 ]
