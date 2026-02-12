@@ -109,4 +109,25 @@ class ExploreService {
       return [];
     }
   }
+
+  static Future<List<UnsplashPhoto>> searchAtmosphere(
+    double x,
+    double y,
+  ) async {
+    // Map coordinates to atmospheric queries
+    String query = 'cinematic';
+    String? color;
+
+    if (y < -0.5) {
+      query = x < 0 ? 'stormy moody' : 'ethereal dream';
+      color = x < 0 ? 'black_and_white' : 'blue';
+    } else if (y > 0.5) {
+      query = x < 0 ? 'gritty urban noir' : 'vibrant energy';
+      color = x < 0 ? 'grey' : 'yellow';
+    } else {
+      query = x < 0 ? 'minimalist calm' : 'celestial light';
+    }
+
+    return searchPhotos(query, color: color);
+  }
 }
