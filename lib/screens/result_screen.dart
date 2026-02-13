@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:io';
+import 'dart:typed_data';
+import 'dart:ui' as ui;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:share_plus/share_plus.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/rendering.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import '../services/storage_service.dart';
 import '../services/analytics_service.dart';
@@ -31,6 +35,7 @@ class ResultScreen extends StatefulWidget {
 class _ResultScreenState extends State<ResultScreen> {
   late String _currentPoem;
   String _selectedStyle = 'Classic';
+  final GlobalKey _boundaryKey = GlobalKey();
 
   @override
   void initState() {
@@ -65,11 +70,32 @@ class _ResultScreenState extends State<ResultScreen> {
 
   void _handleShare() async {
     try {
-      final result = await Share.share(
-        'Check out this poem from Photo Poet:\n\n$_currentPoem',
+      if (kIsWeb) {
+        // Fallback for web since capturing RepaintBoundary is complex on web
+        await Share.share(
+          'Check out this poem from Photo Poet:\n\n$_currentPoem',
+        );
+        return;
+      }
+
+      final RenderRepaintBoundary boundary =
+          _boundaryKey.currentContext!.findRenderObject()
+              as RenderRepaintBoundary;
+      final ui.Image image = await boundary.toImage(pixelRatio: 3.0);
+      final ByteData? byteData = await image.toByteData(
+        format: ui.ImageByteFormat.png,
       );
-      if (result.status == ShareResultStatus.dismissed) return;
-      AnalyticsService.logCompositionShared(method: 'system_share');
+      final Uint8List pngBytes = byteData!.buffer.asUint8List();
+
+      final tempDir = await getTemporaryDirectory();
+      final file = await File('${tempDir.path}/broadside.png').create();
+      await file.writeAsBytes(pngBytes);
+
+      await Share.shareXFiles([
+        XFile(file.path),
+      ], text: 'A creation from Photo Poet\nAuthor: Uforo Ekong');
+
+      AnalyticsService.logCompositionShared(method: 'image_share');
     } catch (e) {
       debugPrint('Share error: $e');
       await Clipboard.setData(ClipboardData(text: _currentPoem));
@@ -199,25 +225,28 @@ class _ResultScreenState extends State<ResultScreen> {
             const SizedBox(height: 16),
             Hero(
               tag: widget.heroTag,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: const Color(0xFF252D36).withValues(alpha: 0.5),
-                  borderRadius: BorderRadius.circular(32),
-                  border: Border.all(color: Colors.white10),
-                ),
-                child: Column(
-                  children: [
-                    ClipRRect(
-                      borderRadius: const BorderRadius.vertical(
-                        top: Radius.circular(32),
+              child: RepaintBoundary(
+                key: _boundaryKey,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF252D36).withValues(alpha: 0.5),
+                    borderRadius: BorderRadius.circular(32),
+                    border: Border.all(color: Colors.white10),
+                  ),
+                  child: Column(
+                    children: [
+                      ClipRRect(
+                        borderRadius: const BorderRadius.vertical(
+                          top: Radius.circular(32),
+                        ),
+                        child: AspectRatio(
+                          aspectRatio: 0.8,
+                          child: _buildImage(),
+                        ),
                       ),
-                      child: AspectRatio(
-                        aspectRatio: 0.8,
-                        child: _buildImage(),
-                      ),
-                    ),
-                    _buildContent(),
-                  ],
+                      _buildContent(),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -309,7 +338,7 @@ class _ResultScreenState extends State<ResultScreen> {
           Container(width: 40, height: 1, color: Colors.white10),
           const SizedBox(height: 16),
           Text(
-            '— Photo Poet AI',
+            '— Uforo Ekong',
             style: GoogleFonts.notoSerif(
               fontSize: 14,
               fontStyle: FontStyle.italic,

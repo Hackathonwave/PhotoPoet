@@ -11,6 +11,17 @@ if ($LASTEXITCODE -ne 0) {
     exit
 }
 
+# 1.5 Zip and Copy Release APK to Web Folder
+Write-Host "`n[1.5/3] Zipping APK for Web Hosting..." -ForegroundColor Yellow
+$apkSource = "build/app/outputs/flutter-apk/app-release.apk"
+$zipDest = "build/web/photopoet_android.zip"
+if (Test-Path $apkSource) {
+    Compress-Archive -Path $apkSource -DestinationPath $zipDest -Force
+    Write-Host "APK zipped and ready for download." -ForegroundColor Green
+} else {
+    Write-Host "Warning: Release APK not found at $apkSource. Skipping versioning." -ForegroundColor Gray
+}
+
 # 2. Update GitHub
 Write-Host "`n[2/3] Updating GitHub..." -ForegroundColor Yellow
 $msg = Read-Host "Enter commit message (or press Enter for 'Auto-update')"
