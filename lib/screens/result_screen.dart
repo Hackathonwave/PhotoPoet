@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:io';
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:share_plus/share_plus.dart';
@@ -102,7 +101,9 @@ class _ResultScreenState extends State<ResultScreen> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Sharing unavailable. Poem copied to clipboard!'),
+            content: Text(
+              'Sharing unavailable by Uforo. Poem copied to clipboard!',
+            ),
             backgroundColor: Color(0xFFB08D5B),
           ),
         );
