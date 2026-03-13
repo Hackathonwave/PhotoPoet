@@ -3,6 +3,7 @@ import 'home_screen.dart';
 import 'library_screen.dart';
 import 'composition_screen.dart';
 import 'explore_screen.dart';
+import 'profile_screen.dart';
 import '../widgets/custom_bottom_nav_bar.dart';
 import '../services/analytics_service.dart';
 import 'package:image_picker/image_picker.dart';
@@ -21,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     const LibraryScreen(),
     const ExploreScreen(),
-    const Center(child: Text('Profile')),
+    const ProfileScreen(),
   ];
 
   Future<void> _pickImage() async {

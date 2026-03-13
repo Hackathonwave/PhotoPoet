@@ -97,4 +97,17 @@ class AnalyticsService {
       debugPrint('Log Screen View failed: $e');
     }
   }
+
+  /// Log when a user signs up for the newsletter
+  static Future<void> logNewsletterSignup({required String email}) async {
+    await _init();
+    try {
+      await _instance?.logEvent(
+        name: 'newsletter_signup',
+        parameters: {'email': email},
+      );
+    } catch (e) {
+      debugPrint('Log Newsletter Signup failed: $e');
+    }
+  }
 }
