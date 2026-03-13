@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../services/analytics_service.dart';
 import '../services/newsletter_service.dart';
+import 'package:pay/pay.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -15,6 +16,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
   final _emailController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   bool _isSubmitting = false;
+
+  final _paymentItems = [
+    const PaymentItem(
+      label: 'Donation to Photo Poet',
+      amount: '5.00',
+      status: PaymentItemStatus.final_price,
+    )
+  ];
+
+  late Future<PaymentConfiguration> _googlePayConfigFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    _googlePayConfigFuture = PaymentConfiguration.fromAsset('assets/data/google_pay_config.json');
+  }
 
   @override
   void dispose() {
@@ -117,6 +134,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _buildProfileHeader(),
                   const SizedBox(height: 40),
                   _buildLikedPoemsSection(),
+                  const SizedBox(height: 48),
+                  _buildDonationSection(),
                   const SizedBox(height: 48),
                   _buildNewsletterCard(),
                   const SizedBox(height: 48),
@@ -402,6 +421,71 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildDonationSection() {
+    return Container(
+      padding: const EdgeInsets.all(28),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFF2C4A59), Color(0xFF171B21)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(32),
+        border: Border.all(color: Colors.white10),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'SUPPORT THE CRAFT',
+            style: GoogleFonts.manrope(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFFB08D5B),
+              letterSpacing: 1.5,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            'Help us keep the verses flowing. Your donations support the digital ink.',
+            style: GoogleFonts.notoSerif(
+              fontSize: 16,
+              color: Colors.white.withValues(alpha: 0.9),
+              height: 1.4,
+            ),
+          ),
+          const SizedBox(height: 24),
+          FutureBuilder<PaymentConfiguration>(
+            future: _googlePayConfigFuture,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return GooglePayButton(
+                  paymentConfiguration: snapshot.data!,
+                  paymentItems: _paymentItems,
+                  type: GooglePayButtonType.donate,
+                  margin: const EdgeInsets.only(top: 15.0),
+                  onPaymentResult: (result) {
+                    debugPrint('Payment Result: $result');
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Thank you for your generous heart!'),
+                        backgroundColor: Color(0xFFB08D5B),
+                      ),
+                    );
+                  },
+                  loadingIndicator: const Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              }
+              return const SizedBox.shrink();
+            },
+          ),
+        ],
       ),
     );
   }
