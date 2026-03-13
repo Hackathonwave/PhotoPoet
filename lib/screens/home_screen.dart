@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
             child: AppBar(
-              backgroundColor: const Color(0xFF171B21).withValues(alpha: 0.8),
+              backgroundColor: const Color(0xFF171B21).withOpacity(0.8),
               elevation: 0,
               centerTitle: true,
               title: Text(
@@ -94,7 +94,7 @@ class HomeScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(24),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withValues(alpha: 0.5),
+                color: Colors.black.withOpacity(0.5),
                 blurRadius: 20,
                 offset: const Offset(0, 10),
               ),
@@ -115,9 +115,9 @@ class HomeScreen extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Colors.black.withValues(alpha: 0.2),
+                        Colors.black.withOpacity(0.2),
                         Colors.transparent,
-                        Colors.black.withValues(alpha: 0.8),
+                        Colors.black.withOpacity(0.8),
                       ],
                     ),
                   ),
@@ -169,7 +169,7 @@ class HomeScreen extends StatelessWidget {
                           elevation: 8,
                           shadowColor: const Color(
                             0xFFB08D5B,
-                          ).withValues(alpha: 0.5),
+                          ).withOpacity(0.5),
                         ).copyWith(elevation: WidgetStateProperty.all(10)),
                       ),
                       const SizedBox(height: 16),

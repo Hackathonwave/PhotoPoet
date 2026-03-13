@@ -17,7 +17,7 @@ class LibraryScreen extends StatelessWidget {
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
             child: AppBar(
-              backgroundColor: const Color(0xFF171B21).withValues(alpha: 0.8),
+              backgroundColor: const Color(0xFF171B21).withOpacity(0.8),
               elevation: 0,
               centerTitle: true,
               title: Text(
@@ -78,13 +78,13 @@ class LibraryScreen extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                const Color(0xFFB08D5B).withValues(alpha: 0.2),
-                const Color(0xFF252D36).withValues(alpha: 0.5),
+                const Color(0xFFB08D5B).withOpacity(0.2),
+                const Color(0xFF252D36).withOpacity(0.5),
               ],
             ),
             borderRadius: BorderRadius.circular(24),
             border: Border.all(
-              color: const Color(0xFFB08D5B).withValues(alpha: 0.3),
+              color: const Color(0xFFB08D5B).withOpacity(0.3),
             ),
           ),
           child: Row(
@@ -92,7 +92,7 @@ class LibraryScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFB08D5B).withValues(alpha: 0.1),
+                  color: const Color(0xFFB08D5B).withOpacity(0.1),
                   shape: BoxShape.circle,
                 ),
                 child: const Icon(

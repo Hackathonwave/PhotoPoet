@@ -150,7 +150,7 @@ class _CompositionScreenState extends State<CompositionScreen> {
                   borderRadius: BorderRadius.circular(24),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.3),
+                      color: Colors.black.withOpacity(0.3),
                       blurRadius: 20,
                       offset: const Offset(0, 10),
                     ),
@@ -296,7 +296,7 @@ class _CompositionScreenState extends State<CompositionScreen> {
             activeTrackColor: const Color(0xFFB08D5B),
             inactiveTrackColor: Colors.white10,
             thumbColor: const Color(0xFFB08D5B),
-            overlayColor: const Color(0xFFB08D5B).withValues(alpha: 0.2),
+            overlayColor: const Color(0xFFB08D5B).withOpacity(0.2),
             trackHeight: 2,
           ),
           child: Slider(
@@ -372,7 +372,7 @@ class _CompositionScreenState extends State<CompositionScreen> {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: const Color(0xFF252D36).withValues(alpha: 0.5),
+        color: const Color(0xFF252D36).withOpacity(0.5),
         borderRadius: BorderRadius.circular(24),
         border: Border.all(color: Colors.white10),
       ),
@@ -399,7 +399,7 @@ class _CompositionScreenState extends State<CompositionScreen> {
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.red.withValues(alpha: 0.2),
+                    color: Colors.red.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
@@ -444,8 +444,8 @@ class _CompositionScreenState extends State<CompositionScreen> {
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: _isRecording
-                        ? Colors.red.withValues(alpha: 0.2)
-                        : const Color(0xFFB08D5B).withValues(alpha: 0.2),
+                        ? Colors.red.withOpacity(0.2)
+                        : const Color(0xFFB08D5B).withOpacity(0.2),
                     shape: BoxShape.circle,
                   ),
                   child: Icon(

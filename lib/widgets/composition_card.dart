@@ -110,7 +110,7 @@ class CompositionCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
+            color: Colors.black.withOpacity(0.3),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -132,9 +132,9 @@ class CompositionCard extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Colors.black.withValues(alpha: 0.1),
-                    const Color(0xFF171B21).withValues(alpha: 0.6),
-                    const Color(0xFF171B21).withValues(alpha: 0.9),
+                    Colors.black.withOpacity(0.1),
+                    const Color(0xFF171B21).withOpacity(0.6),
+                    const Color(0xFF171B21).withOpacity(0.9),
                   ],
                 ),
               ),

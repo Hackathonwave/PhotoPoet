@@ -137,7 +137,7 @@ class _AudioArchiveScreenState extends State<AudioArchiveScreen> {
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: const Color(0xFF252D36).withValues(alpha: 0.5),
+        color: const Color(0xFF252D36).withOpacity(0.5),
         borderRadius: BorderRadius.circular(24),
         border: Border.all(color: Colors.white10),
       ),
@@ -153,7 +153,7 @@ class _AudioArchiveScreenState extends State<AudioArchiveScreen> {
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       color: isPlaying
-                          ? const Color(0xFFB08D5B).withValues(alpha: 0.2)
+                          ? const Color(0xFFB08D5B).withOpacity(0.2)
                           : Colors.white10,
                       shape: BoxShape.circle,
                     ),

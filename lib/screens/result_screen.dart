@@ -48,21 +48,21 @@ class _ResultScreenState extends State<ResultScreen> {
         return GoogleFonts.manrope(
           fontSize: 18,
           height: 1.8,
-          color: Colors.white.withValues(alpha: 0.9),
+          color: Colors.white.withOpacity(0.9),
           letterSpacing: 1.2,
         );
       case 'Typewriter':
         return GoogleFonts.specialElite(
           fontSize: 18,
           height: 1.8,
-          color: Colors.white.withValues(alpha: 0.8),
+          color: Colors.white.withOpacity(0.8),
         );
       default:
         return GoogleFonts.notoSerif(
           fontSize: 18,
           height: 1.8,
           fontStyle: FontStyle.italic,
-          color: Colors.white.withValues(alpha: 0.9),
+          color: Colors.white.withOpacity(0.9),
         );
     }
   }
@@ -230,7 +230,7 @@ class _ResultScreenState extends State<ResultScreen> {
                 key: _boundaryKey,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: const Color(0xFF252D36).withValues(alpha: 0.5),
+                    color: const Color(0xFF252D36).withOpacity(0.5),
                     borderRadius: BorderRadius.circular(32),
                     border: Border.all(color: Colors.white10),
                   ),
@@ -302,7 +302,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     borderRadius: BorderRadius.circular(20),
                     side: BorderSide(
                       color: isSelected
-                          ? const Color(0xFFB08D5B).withValues(alpha: 0.5)
+                          ? const Color(0xFFB08D5B).withOpacity(0.5)
                           : Colors.white10,
                     ),
                   ),
@@ -359,7 +359,7 @@ class _ResultScreenState extends State<ResultScreen> {
         borderRadius: BorderRadius.circular(40),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
+            color: Colors.black.withOpacity(0.3),
             blurRadius: 20,
             offset: const Offset(0, 10),
           ),

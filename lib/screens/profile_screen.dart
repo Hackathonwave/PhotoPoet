@@ -105,7 +105,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         end: Alignment.bottomCenter,
                         colors: [
                           Colors.transparent,
-                          const Color(0xFF171B21).withValues(alpha: 0.8),
+                          const Color(0xFF171B21).withOpacity(0.8),
                           const Color(0xFF171B21),
                         ],
                       ),
@@ -195,7 +195,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Container(
       padding: const EdgeInsets.all(28),
       decoration: BoxDecoration(
-        color: const Color(0xFF252D36).withValues(alpha: 0.5),
+        color: const Color(0xFF252D36).withOpacity(0.5),
         borderRadius: BorderRadius.circular(32),
         border: Border.all(color: Colors.white10),
       ),
@@ -216,7 +216,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             'Join our weekly gazette of verses and visual inspirations.',
             style: GoogleFonts.notoSerif(
               fontSize: 18,
-              color: Colors.white.withValues(alpha: 0.9),
+              color: Colors.white.withOpacity(0.9),
               height: 1.4,
             ),
           ),
@@ -376,7 +376,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
+            color: Colors.black.withOpacity(0.2),
             blurRadius: 10,
             offset: const Offset(0, 5),
           ),
@@ -395,7 +395,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.transparent,
-                    Colors.black.withValues(alpha: 0.7),
+                    Colors.black.withOpacity(0.7),
                   ],
                 ),
               ),
@@ -454,7 +454,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             'Help us keep the verses flowing. Your donations support the digital ink.',
             style: GoogleFonts.notoSerif(
               fontSize: 16,
-              color: Colors.white.withValues(alpha: 0.9),
+              color: Colors.white.withOpacity(0.9),
               height: 1.4,
             ),
           ),
@@ -462,6 +462,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
           FutureBuilder<PaymentConfiguration>(
             future: _googlePayConfigFuture,
             builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(child: CircularProgressIndicator());
+              }
+              if (snapshot.hasError) {
+                debugPrint('Google Pay Config Error: ${snapshot.error}');
+                return Text(
+                  'Configuration error. Please check logs.',
+                  style: GoogleFonts.manrope(color: Colors.redAccent, fontSize: 12),
+                );
+              }
               if (snapshot.hasData) {
                 return GooglePayButton(
                   paymentConfiguration: snapshot.data!,
@@ -482,7 +492,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 );
               }
-              return const SizedBox.shrink();
+              return Text(
+                'Google Pay is not available on this device/platform.',
+                style: GoogleFonts.manrope(color: Colors.white38, fontSize: 12),
+              );
             },
           ),
         ],
@@ -510,7 +523,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         leading: Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.05),
+            color: Colors.white.withOpacity(0.05),
             shape: BoxShape.circle,
           ),
           child: Icon(icon, color: Colors.white70, size: 20),
@@ -519,7 +532,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           title,
           style: GoogleFonts.manrope(
             fontSize: 16,
-            color: Colors.white.withValues(alpha: 0.8),
+            color: Colors.white.withOpacity(0.8),
             fontWeight: FontWeight.w500,
           ),
         ),
