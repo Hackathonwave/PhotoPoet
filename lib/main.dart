@@ -19,15 +19,20 @@ void main() async {
   };
 
   try {
-    // Initialize Firebase (Google Analytics)
-    // Note: On Web/Desktop, this might fail without DefaultFirebaseOptions
+    // Initialize Firebase (Google Analytics & Firestore)
+    debugPrint('Initializing Firebase...');
     await Firebase.initializeApp();
+    debugPrint('Firebase initialized successfully');
 
     // Log App Open
     await AnalyticsService.logAppOpen();
   } catch (e) {
-    debugPrint('Firebase initialization failed: $e');
-    // We continue so the app doesn't show a white screen
+    debugPrint('--- FIREBASE INITIALIZATION FAILED ---');
+    debugPrint('Error: $e');
+    debugPrint('Check if google-services.json (Android) or GoogleService-Info.plist (iOS) are missing.');
+    debugPrint('---------------------------------------');
+    // We continue so the app doesn't show a white screen, 
+    // but features requiring Firebase will show descriptive errors.
   }
 
   try {

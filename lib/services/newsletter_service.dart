@@ -2,8 +2,17 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 
 class NewsletterService {
-  static final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  static final String _collectionName = 'subscribers';
+  static FirebaseFirestore? _firestoreInstance;
+  static const String _collectionName = 'subscribers';
+
+  static FirebaseFirestore get _firestore {
+    try {
+      return _firestoreInstance ??= FirebaseFirestore.instance;
+    } catch (e) {
+      debugPrint('[NewsletterService] Firestore instance access failed: $e');
+      throw 'Firebase not initialized. Please check your configuration.';
+    }
+  }
 
   /// Subscribes an email to the newsletter by storing it in Cloud Firestore.
   static Future<void> subscribe(String email) async {
