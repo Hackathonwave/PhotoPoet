@@ -1,16 +1,1 @@
-{
-  "hosting": {
-    "public": "build/web",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
-}
+{"hosting":{"public":"build/web","ignore":["firebase.json","**/.*","**/node_modules/**"],"rewrites":[{"source":"**","destination":"/index.html"}]},"flutter":{"platforms":{"android":{"default":{"projectId":"photopoet-ebtw5","appId":"1:1038522757895:android:986c86065b072c6680cba2","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"photopoet-ebtw5","configurations":{"android":"1:1038522757895:android:986c86065b072c6680cba2","ios":"1:1038522757895:ios:fe069bee54b4203b80cba2","web":"1:1038522757895:web:26abe3d80e824c1a80cba2","windows":"1:1038522757895:web:785167d97bdd6c6980cba2"}}}}}}

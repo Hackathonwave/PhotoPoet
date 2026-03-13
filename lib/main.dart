@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'screens/main_screen.dart';
 import 'services/local_poetry_service.dart';
 import 'services/analytics_service.dart';
+import 'firebase_options.dart';
 
 void main() async {
   // Emergency logging for startup issues
@@ -21,7 +22,9 @@ void main() async {
   try {
     // Initialize Firebase (Google Analytics & Firestore)
     debugPrint('Initializing Firebase...');
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
     debugPrint('Firebase initialized successfully');
 
     // Log App Open
