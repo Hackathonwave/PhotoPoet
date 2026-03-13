@@ -11,12 +11,14 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   bool _isSubmitting = false;
 
   @override
   void dispose() {
+    _nameController.dispose();
     _emailController.dispose();
     super.dispose();
   }
@@ -27,13 +29,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
       
       try {
         // Store in Firestore
-        await NewsletterService.subscribe(_emailController.text);
+        await NewsletterService.subscribe(
+          email: _emailController.text,
+          name: _nameController.text,
+        );
         
         // Log analytics
         await AnalyticsService.logNewsletterSignup(email: _emailController.text);
 
         if (mounted) {
           setState(() => _isSubmitting = false);
+          _nameController.clear();
           _emailController.clear();
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
@@ -110,6 +116,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   _buildProfileHeader(),
                   const SizedBox(height: 40),
+                  _buildLikedPoemsSection(),
+                  const SizedBox(height: 48),
                   _buildNewsletterCard(),
                   const SizedBox(height: 48),
                   _buildSettingsSection(),
@@ -199,6 +207,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: Column(
               children: [
                 TextFormField(
+                  controller: _nameController,
+                  style: GoogleFonts.manrope(color: Colors.white),
+                  decoration: InputDecoration(
+                    hintText: 'Your Name',
+                    hintStyle: const TextStyle(color: Colors.white24),
+                    filled: true,
+                    fillColor: Colors.black26,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      borderSide: BorderSide.none,
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 18,
+                    ),
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your name';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 12),
+                TextFormField(
                   controller: _emailController,
                   style: GoogleFonts.manrope(color: Colors.white),
                   decoration: InputDecoration(
@@ -262,6 +295,113 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildLikedPoemsSection() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'MY GALLERY',
+              style: GoogleFonts.manrope(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                color: const Color(0xFFB08D5B),
+                letterSpacing: 1.5,
+              ),
+            ),
+            Text(
+              'View All',
+              style: GoogleFonts.manrope(
+                fontSize: 12,
+                color: Colors.white38,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 20),
+        SizedBox(
+          height: 180,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              _buildPoemCard(
+                'Whispers in the Rain',
+                'https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=500&auto=format&fit=crop',
+              ),
+              _buildPoemCard(
+                'Golden Hour Dreams',
+                'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=500&auto=format&fit=crop',
+              ),
+              _buildPoemCard(
+                'Starlit Pathways',
+                'https://images.unsplash.com/photo-1532974297617-c0f05fe48bff?q=80&w=500&auto=format&fit=crop',
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildPoemCard(String title, String imageUrl) {
+    return Container(
+      width: 140,
+      margin: const EdgeInsets.only(right: 16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.2),
+            blurRadius: 10,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Image.network(imageUrl, fit: BoxFit.cover),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.transparent,
+                    Colors.black.withValues(alpha: 0.7),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: GoogleFonts.notoSerif(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
