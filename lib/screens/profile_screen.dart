@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../services/analytics_service.dart';
+import '../services/newsletter_service.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -24,20 +25,33 @@ class _ProfileScreenState extends State<ProfileScreen> {
     if (_formKey.currentState!.validate()) {
       setState(() => _isSubmitting = true);
       
-      // Simulate API call
-      await Future.delayed(const Duration(seconds: 2));
-      
-      await AnalyticsService.logNewsletterSignup(email: _emailController.text);
+      try {
+        // Store in Firestore
+        await NewsletterService.subscribe(_emailController.text);
+        
+        // Log analytics
+        await AnalyticsService.logNewsletterSignup(email: _emailController.text);
 
-      if (mounted) {
-        setState(() => _isSubmitting = false);
-        _emailController.clear();
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Welcome to the inner circle!'),
-            backgroundColor: Color(0xFFB08D5B),
-          ),
-        );
+        if (mounted) {
+          setState(() => _isSubmitting = false);
+          _emailController.clear();
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Welcome to the inner circle!'),
+              backgroundColor: Color(0xFFB08D5B),
+            ),
+          );
+        }
+      } catch (e) {
+        if (mounted) {
+          setState(() => _isSubmitting = false);
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Subscription failed: ${e.toString()}'),
+              backgroundColor: Colors.redAccent,
+            ),
+          );
+        }
       }
     }
   }
