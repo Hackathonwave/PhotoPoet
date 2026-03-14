@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../services/analytics_service.dart';
 import '../services/newsletter_service.dart';
+import '../services/sports_service.dart';
 import 'package:pay/pay.dart';
 import 'package:flutter/services.dart';
 
@@ -27,11 +28,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
   ];
 
   late Future<PaymentConfiguration> _googlePayConfigFuture;
+  final _sportsService = SportsService();
+  late Future<List<TeamStanding>> _standingsFuture;
 
   @override
   void initState() {
     super.initState();
     _googlePayConfigFuture = _loadGooglePayConfig();
+    _standingsFuture = _sportsService.getPremierLeagueStandings();
   }
 
   Future<PaymentConfiguration> _loadGooglePayConfig() async {
@@ -147,6 +151,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _buildLikedPoemsSection(),
                   const SizedBox(height: 48),
                   _buildDonationSection(),
+                  const SizedBox(height: 48),
+                  _buildStandingsSection(),
                   const SizedBox(height: 48),
                   _buildNewsletterCard(),
                   const SizedBox(height: 48),
@@ -563,6 +569,132 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         onTap: () {},
       ),
+    );
+  }
+
+  Widget _buildStandingsSection() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'PREMIER LEAGUE STANDINGS',
+          style: GoogleFonts.manrope(
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+            color: const Color(0xFFB08D5B),
+            letterSpacing: 1.5,
+          ),
+        ),
+        const SizedBox(height: 20),
+        FutureBuilder<List<TeamStanding>>(
+          future: _standingsFuture,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                child: Padding(
+                  padding: EdgeInsets.all(32.0),
+                  child: CircularProgressIndicator(color: Color(0xFFB08D5B)),
+                ),
+              );
+            }
+            if (snapshot.hasError) {
+              return Text(
+                'Failed to load standings.',
+                style: GoogleFonts.manrope(color: Colors.redAccent.withValues(alpha: 0.8), fontSize: 14),
+              );
+            }
+            
+            final standings = snapshot.data;
+            if (standings == null || standings.isEmpty) {
+              return Text(
+                'No standings data available.',
+                style: GoogleFonts.manrope(color: Colors.white38, fontSize: 14),
+              );
+            }
+
+            // Show top 10 teams
+            return Container(
+              decoration: BoxDecoration(
+                color: const Color(0xFF252D36).withValues(alpha: 0.5),
+                borderRadius: BorderRadius.circular(24),
+                border: Border.all(color: Colors.white10),
+              ),
+              child: ListView.separated(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: standings.length > 10 ? 10 : standings.length,
+                separatorBuilder: (context, index) => const Divider(color: Colors.white10, height: 1),
+                itemBuilder: (context, index) {
+                  final team = standings[index];
+                  return ListTile(
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                    leading: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        SizedBox(
+                          width: 24,
+                          child: Text(
+                            '${team.rank}',
+                            style: GoogleFonts.manrope(
+                              color: Colors.white54,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Image.network(
+                          team.badgeUrl,
+                          width: 32,
+                          height: 32,
+                          errorBuilder: (context, error, stackTrace) => const Icon(Icons.shield, color: Colors.white24, size: 32),
+                        ),
+                      ],
+                    ),
+                    title: Text(
+                      team.teamName,
+                      style: GoogleFonts.notoSerif(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
+                    ),
+                    subtitle: Text(
+                      'P: ${team.played} | W: ${team.win} | D: ${team.draw} | L: ${team.loss}',
+                      style: GoogleFonts.manrope(
+                        color: Colors.white38,
+                        fontSize: 11,
+                      ),
+                    ),
+                    trailing: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          '${team.points} pts',
+                          style: GoogleFonts.manrope(
+                            color: const Color(0xFFB08D5B),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Text(
+                          'GD: ${team.goalDifference > 0 ? '+' : ''}${team.goalDifference}',
+                          style: GoogleFonts.manrope(
+                            color: team.goalDifference > 0 ? Colors.green[300] : (team.goalDifference < 0 ? Colors.red[300] : Colors.white54),
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            );
+          },
+        ),
+      ],
     );
   }
 }
