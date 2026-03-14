@@ -17,9 +17,9 @@ class PoeticWhisper extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Colors.black.withOpacity(0.0),
-            Colors.black.withOpacity(0.4),
-            Colors.black.withOpacity(0.0),
+            Colors.black.withValues(alpha: 0.0),
+            Colors.black.withValues(alpha: 0.4),
+            Colors.black.withValues(alpha: 0.0),
           ],
         ),
       ),
@@ -31,7 +31,7 @@ class PoeticWhisper extends StatelessWidget {
               textAlign: TextAlign.center,
               textStyle: GoogleFonts.notoSerif(
                 fontSize: 18,
-                color: Colors.white.withOpacity(0.9),
+                color: Colors.white.withValues(alpha: 0.9),
                 fontStyle: FontStyle.italic,
                 height: 1.6,
                 letterSpacing: 0.5,

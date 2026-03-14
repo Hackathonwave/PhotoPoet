@@ -66,15 +66,15 @@ class _MoodOrbState extends State<MoodOrb> with SingleTickerProviderStateMixin {
                   BoxShadow(
                     color: const Color(
                       0xFFB08D5B,
-                    ).withOpacity(0.3 * _pulseController.value),
+                    ).withValues(alpha: 0.3 * _pulseController.value),
                     blurRadius: 20 + (10 * _pulseController.value),
                     spreadRadius: 5 * _pulseController.value,
                   ),
                 ],
                 gradient: RadialGradient(
                   colors: [
-                    const Color(0xFFB08D5B).withOpacity(0.8),
-                    const Color(0xFFB08D5B).withOpacity(0.2),
+                    const Color(0xFFB08D5B).withValues(alpha: 0.8),
+                    const Color(0xFFB08D5B).withValues(alpha: 0.2),
                     Colors.transparent,
                   ],
                 ),
@@ -86,8 +86,8 @@ class _MoodOrbState extends State<MoodOrb> with SingleTickerProviderStateMixin {
                   child: Center(
                     child: Icon(
                       Icons.blur_on_rounded,
-                      color: Colors.white.withOpacity(
-                        0.5 + (0.5 * _pulseController.value),
+                      color: Colors.white.withValues(
+                        alpha: 0.5 + (0.5 * _pulseController.value),
                       ),
                       size: 24,
                     ),

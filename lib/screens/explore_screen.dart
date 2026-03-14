@@ -179,9 +179,9 @@ class _ExploreScreenState extends State<ExploreScreen> {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Colors.black.withOpacity(0.4),
+                Colors.black.withValues(alpha: 0.4),
                 Colors.transparent,
-                Colors.black.withOpacity(0.8),
+                Colors.black.withValues(alpha: 0.8),
               ],
             ),
           ),
@@ -235,10 +235,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     vertical: 8,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFB08D5B).withOpacity(0.2),
+                    color: const Color(0xFFB08D5B).withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
-                      color: const Color(0xFFB08D5B).withOpacity(0.5),
+                      color: const Color(0xFFB08D5B).withValues(alpha: 0.5),
                     ),
                   ),
                   child: Row(
@@ -278,7 +278,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
       child: Container(
         height: 56,
         decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.2),
+          color: Colors.black.withValues(alpha: 0.2),
           borderRadius: BorderRadius.circular(28),
           border: Border.all(color: Colors.white10),
         ),

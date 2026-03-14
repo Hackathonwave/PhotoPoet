@@ -23,7 +23,7 @@ class CustomBottomNavBar extends StatelessWidget {
           height: 100,
           padding: const EdgeInsets.only(bottom: 20),
           decoration: BoxDecoration(
-            color: const Color(0xFF171B21).withOpacity(0.9),
+            color: const Color(0xFF171B21).withValues(alpha: 0.9),
             border: const Border(
               top: BorderSide(color: Colors.white10, width: 0.5),
             ),
@@ -85,7 +85,7 @@ class CustomBottomNavBar extends StatelessWidget {
             border: Border.all(color: Colors.white10, width: 1),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.4),
+                color: Colors.black.withValues(alpha: 0.4),
                 blurRadius: 15,
                 offset: const Offset(0, 8),
               ),

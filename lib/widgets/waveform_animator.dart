@@ -46,7 +46,7 @@ class _WaveformAnimatorState extends State<WaveformAnimator>
             height: 4,
             margin: const EdgeInsets.symmetric(horizontal: 2),
             decoration: BoxDecoration(
-              color: widget.color.withOpacity(0.2),
+              color: widget.color.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(2),
             ),
           ),
@@ -71,11 +71,11 @@ class _WaveformAnimatorState extends State<WaveformAnimator>
               height: height,
               margin: const EdgeInsets.symmetric(horizontal: 2),
               decoration: BoxDecoration(
-                color: widget.color.withOpacity(0.8),
+                color: widget.color.withValues(alpha: 0.8),
                 borderRadius: BorderRadius.circular(2),
                 boxShadow: [
                   BoxShadow(
-                    color: widget.color.withOpacity(0.3),
+                    color: widget.color.withValues(alpha: 0.3),
                     blurRadius: 4,
                   ),
                 ],
