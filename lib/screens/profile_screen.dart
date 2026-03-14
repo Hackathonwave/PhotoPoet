@@ -30,7 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   void initState() {
     super.initState();
-    _googlePayConfigFuture = PaymentConfiguration.fromAsset('assets/data/google_pay_config.json');
+    _googlePayConfigFuture = PaymentConfiguration.fromAsset('assets/google_pay_config.json');
   }
 
   @override
@@ -467,9 +467,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
               }
               if (snapshot.hasError) {
                 debugPrint('Google Pay Config Error: ${snapshot.error}');
-                return Text(
-                  'Configuration error. Please check logs.',
-                  style: GoogleFonts.manrope(color: Colors.redAccent, fontSize: 12),
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Configuration error:',
+                      style: GoogleFonts.manrope(color: Colors.redAccent, fontSize: 12, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      '${snapshot.error}',
+                      style: GoogleFonts.manrope(color: Colors.redAccent.withOpacity(0.8), fontSize: 10),
+                    ),
+                  ],
                 );
               }
               if (snapshot.hasData) {
