@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../services/analytics_service.dart';
 import '../services/newsletter_service.dart';
 import '../services/sports_service.dart';
+import '../widgets/rain_effect.dart';
 import 'package:pay/pay.dart';
 import 'package:flutter/services.dart';
 
@@ -98,8 +99,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF171B21),
-      body: CustomScrollView(
-        slivers: [
+      body: Stack(
+        children: [
+          const Positioned.fill(child: RainEffect()),
+          CustomScrollView(
+            slivers: [
           SliverAppBar(
             expandedHeight: 200,
             floating: false,
@@ -162,6 +166,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
           ),
+        ],
+      ),
         ],
       ),
     );
