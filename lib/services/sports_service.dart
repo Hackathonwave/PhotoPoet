@@ -51,7 +51,8 @@ class TeamStanding {
 }
 
 class SportsService {
-  static const String _baseUrl = 'https://api.football-data.org/v4/competitions/PL/standings';
+  static const String _baseUrl =
+      'https://api.football-data.org/v4/competitions/PL/standings';
   static const String _apiToken = '95bb9ee0b58945d891a1cecaf9dcf4ea';
 
   Future<List<TeamStanding>> getPremierLeagueStandings() async {
@@ -63,16 +64,19 @@ class SportsService {
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = json.decode(response.body);
-        
-        if (data['standings'] != null && (data['standings'] as List).isNotEmpty) {
+
+        if (data['standings'] != null &&
+            (data['standings'] as List).isNotEmpty) {
           final List<dynamic> tableData = data['standings'][0]['table'];
           return tableData.map((json) => TeamStanding.fromJson(json)).toList();
         } else {
           return [];
         }
       } else {
-        debugPrint('Failed to load standings: ${response.statusCode} - ${response.body}');
-        throw Exception('Failed to load standings');
+        debugPrint(
+          'Failed to load standings: ${response.statusCode} - ${response.body}',
+        );
+        throw Exception('Failed to load Uforo Ekong Standings');
       }
     } catch (e) {
       debugPrint('Error fetching Premier League standings: $e');
