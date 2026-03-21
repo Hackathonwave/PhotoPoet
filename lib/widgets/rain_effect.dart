@@ -1,6 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+enum ParticleType { fire, snow }
+
 class RainEffect extends StatefulWidget {
   const RainEffect({super.key});
 
@@ -10,7 +12,7 @@ class RainEffect extends StatefulWidget {
 
 class _RainEffectState extends State<RainEffect> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  final List<RainDrop> _drops = [];
+  final List<Particle> _particles = [];
   final Random _random = Random();
   Size _currentSize = Size.zero;
 
@@ -21,22 +23,30 @@ class _RainEffectState extends State<RainEffect> with SingleTickerProviderStateM
       vsync: this,
       duration: const Duration(seconds: 1),
     )..addListener(() {
-        _updateDrops();
+        _updateParticles();
       })
       ..repeat();
   }
 
-  void _updateDrops() {
-    if (_currentSize == Size.zero || _drops.isEmpty) return;
-    for (var drop in _drops) {
-      drop.y += drop.speed;
-      drop.x += drop.speed * 0.15; // slight wind
-      if (drop.y > _currentSize.height) {
-        drop.y = -drop.length; // reset top
-        drop.x = _random.nextDouble() * _currentSize.width;
+  void _updateParticles() {
+    if (_currentSize == Size.zero || _particles.isEmpty) return;
+    for (var p in _particles) {
+      if (p.type == ParticleType.fire) {
+        p.y += p.speed;
+        p.x += p.speed * 0.15; // wind
+      } else {
+        p.y += p.speed;
+        p.x += sin(p.y * 0.05) * 1.5 + p.speed * 0.1; // swaying and wind
       }
-      if (drop.x > _currentSize.width) {
-        drop.x = 0;
+
+      if (p.y > _currentSize.height) {
+        p.y = -p.size; // reset top
+        p.x = _random.nextDouble() * _currentSize.width;
+      }
+      if (p.x > _currentSize.width) {
+        p.x = 0;
+      } else if (p.x < 0) {
+        p.x = _currentSize.width;
       }
     }
     setState(() {}); // trigger repaint
@@ -55,21 +65,34 @@ class _RainEffectState extends State<RainEffect> with SingleTickerProviderStateM
         final newSize = Size(constraints.maxWidth, constraints.maxHeight);
         if (_currentSize != newSize) {
           _currentSize = newSize;
-          _drops.clear();
-          for (int i = 0; i < 150; i++) {
-            _drops.add(RainDrop(
+          _particles.clear();
+          // Fire particles
+          for (int i = 0; i < 80; i++) {
+            _particles.add(Particle(
+              type: ParticleType.fire,
               x: _random.nextDouble() * _currentSize.width,
               y: _random.nextDouble() * _currentSize.height,
-              length: _random.nextDouble() * 15 + 10,
-              speed: _random.nextDouble() * 6 + 6,
-              opacity: _random.nextDouble() * 0.4 + 0.1,
+              size: _random.nextDouble() * 15 + 10,
+              speed: _random.nextDouble() * 8 + 8,
+              opacity: _random.nextDouble() * 0.5 + 0.3,
+            ));
+          }
+          // Snow particles
+          for (int i = 0; i < 70; i++) {
+            _particles.add(Particle(
+              type: ParticleType.snow,
+              x: _random.nextDouble() * _currentSize.width,
+              y: _random.nextDouble() * _currentSize.height,
+              size: _random.nextDouble() * 2.5 + 1.5,
+              speed: _random.nextDouble() * 2.5 + 1.5,
+              opacity: _random.nextDouble() * 0.5 + 0.3,
             ));
           }
         }
         return RepaintBoundary(
           child: CustomPaint(
             size: _currentSize,
-            painter: RainPainter(_drops),
+            painter: StormPainter(_particles),
           ),
         );
       },
@@ -77,39 +100,59 @@ class _RainEffectState extends State<RainEffect> with SingleTickerProviderStateM
   }
 }
 
-class RainDrop {
-  double x, y, length, speed, opacity;
-  RainDrop({
+class Particle {
+  ParticleType type;
+  double x, y, size, speed, opacity;
+  Particle({
+    required this.type,
     required this.x,
     required this.y,
-    required this.length,
+    required this.size,
     required this.speed,
     required this.opacity,
   });
 }
 
-class RainPainter extends CustomPainter {
-  final List<RainDrop> drops;
+class StormPainter extends CustomPainter {
+  final List<Particle> particles;
 
-  RainPainter(this.drops);
+  StormPainter(this.particles);
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..strokeWidth = 1.0
-      ..strokeCap = StrokeCap.round;
+    final firePaint = Paint()..strokeCap = StrokeCap.round;
+    final snowPaint = Paint()..style = PaintingStyle.fill;
 
-    for (var drop in drops) {
-      // Use withValues(alpha:) for recent Flutter versions
-      paint.color = Colors.white.withValues(alpha: drop.opacity);
-      canvas.drawLine(
-        Offset(drop.x, drop.y),
-        Offset(drop.x + drop.speed * 0.15, drop.y + drop.length),
-        paint,
-      );
+    for (var p in particles) {
+      if (p.type == ParticleType.fire) {
+        final gradientPaint = Paint()
+          ..shader = LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.yellowAccent.withValues(alpha: 0.0),
+              Colors.orange.withValues(alpha: p.opacity),
+              Colors.redAccent.withValues(alpha: p.opacity),
+            ],
+          ).createShader(Rect.fromPoints(
+            Offset(p.x, p.y),
+            Offset(p.x + p.speed * 0.15, p.y + p.size),
+          ))
+          ..strokeWidth = 2.0
+          ..strokeCap = StrokeCap.round;
+
+        canvas.drawLine(
+          Offset(p.x, p.y),
+          Offset(p.x + p.speed * 0.15, p.y + p.size),
+          gradientPaint,
+        );
+      } else if (p.type == ParticleType.snow) {
+        snowPaint.color = Colors.white.withValues(alpha: p.opacity);
+        canvas.drawCircle(Offset(p.x, p.y), p.size, snowPaint);
+      }
     }
   }
 
   @override
-  bool shouldRepaint(covariant RainPainter oldDelegate) => true;
+  bool shouldRepaint(covariant StormPainter oldDelegate) => true;
 }
